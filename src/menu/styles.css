@@ -11,11 +11,9 @@
   font-family: 'Shadows Into Light', serif;
 }
 
-.rightAlign h1 {
-  text-align: right;
-}
+.rightAlign h1,
 .rightAlign h5, .rightAlign ul {
-  margin-left: 42%;
+  margin-left: 35%;
 }
 
 @media screen and (max-width: 1024px) {

@@ -20,6 +20,7 @@ class MenuPage extends React.Component {
                 style={{
                   backgroundImage: 'url("http://www.seriouseats.com/images/2014/03/20140324-taiwaneats-porkbellybuns-finished.jpg")',
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center middle',
                   border: '1px solid black',
                   minHeight: '250px',
                 }}
@@ -59,6 +60,7 @@ class MenuPage extends React.Component {
                 style={{
                   backgroundImage: 'url("http://steamykitchen.com/wp-content/uploads/2012/07/pork-belly-buns-recipe-8380.jpg")',
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center middle',
                   border: '1px solid black',
                   minHeight: '250px',
                 }}
@@ -71,8 +73,9 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
-                  backgroundImage: 'url("http://bucket.wowbao.com/wp-content/uploads/baobuns.jpg")',
+                  backgroundImage: 'url("http://steamykitchen.com/wp-content/uploads/2012/07/pork-belly-buns-recipe-8380.jpg")',
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center middle',
                   border: '1px solid black',
                   minHeight: '250px',
                 }}
@@ -99,6 +102,7 @@ class MenuPage extends React.Component {
                 style={{
                   backgroundImage: 'url("http://bucket.wowbao.com/wp-content/uploads/baobuns.jpg")',
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center middle',
                   border: '1px solid black',
                   minHeight: '250px',
                 }}
@@ -139,6 +143,7 @@ class MenuPage extends React.Component {
                 style={{
                   backgroundImage: 'url("http://cdnwp.audiencemedia.com/wp-content/uploads/2016/01/615296-1-eng-GB_how-to-make-bao-buns-960x420.jpg")',
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center middle',
                   border: '1px solid black',
                   minHeight: '250px',
                 }}
@@ -153,6 +158,7 @@ class MenuPage extends React.Component {
                 style={{
                   backgroundImage: 'url("http://cdnwp.audiencemedia.com/wp-content/uploads/2016/01/615296-1-eng-GB_how-to-make-bao-buns-960x420.jpg")',
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center middle',
                   border: '1px solid black',
                   minHeight: '250px',
                 }}
