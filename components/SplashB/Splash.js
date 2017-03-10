@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import cx from 'classnames';
 import s from './Splash.css';
 
-class Splash extends React.Component {
+class SplashB extends React.Component {
 
   static propTypes = {
     className: PropTypes.string,
@@ -115,4 +115,4 @@ class Splash extends React.Component {
   }
 }
 
-export default Splash;
+export default SplashB;

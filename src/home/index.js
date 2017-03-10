@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import Splash from '../../components/Splash';
+import SplashA from '../../components/SplashA';
 import s from './styles.css';
 import { title, html } from './index.md';
 
@@ -19,8 +19,8 @@ class HomePage extends React.Component {
           <br /><br />
         </p>
         <div className={`mdl-grid ${s.centered}`}>
-          <div className="mdl-cell mdl-cell--8-col">
-            <Splash width={700} height={375} className="center" />
+          <div className="mdl-cell mdl-cell--10-col">
+            <SplashA width={900} height={375} className="center" />
             <div
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: html }}
