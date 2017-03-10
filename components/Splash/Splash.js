@@ -12,16 +12,17 @@ class Splash extends React.Component {
 
   static defaultProps = {
     width: 400,
-    height: 300,
+    height: 375,
   };
 
   render() {
     return (
       <div className={cx(s.container, this.props.className)} >
         <svg
-          className={s.splash} width={`${this.props.width}px`}
-          height={`${this.props.height}px`}
-          viewBox={`20 250 ${this.props.width} ${this.props.height + 50}`}
+          className={s.splash}
+          width="100%"
+          height="100%"
+          viewBox="-50 265 700 325"
           preserveAspectRatio="xMinYMin meet"
           version="1.1"
         >

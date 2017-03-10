@@ -20,7 +20,7 @@ class HomePage extends React.Component {
         </p>
         <div className={`mdl-grid ${s.centered}`}>
           <div className="mdl-cell mdl-cell--8-col">
-            <Splash width={500} height={300} className="center" />
+            <Splash width={700} height={375} className="center" />
             <div
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: html }}
