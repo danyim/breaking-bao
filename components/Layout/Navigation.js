@@ -20,8 +20,9 @@ class Navigation extends React.Component {
           <Logo className={s.logo} width="75px" height="75px" />
         </Link>
         <Link className={`mdl-navigation__link ${s.link}`} to="/menu">Menu</Link>
-        <Link className={`mdl-navigation__link ${s.link}`} to="/location">Location</Link>
-        <Link className={`mdl-navigation__link ${s.link}`} to="/contact">Contact</Link>
+        <Link className={`mdl-navigation__link ${s.link}`} to="/location">Location / Contact</Link>
+        {//<Link className={`mdl-navigation__link ${s.link}`} to="/contact">Contact</Link>
+        }
       </nav>
     );
   }
