@@ -1,0 +1,9 @@
+.transparent {
+  background-color: transparent;
+}
+
+.logo {
+  font-size: .9rem;
+  font-style: italic;
+  color: #dedede;
+}

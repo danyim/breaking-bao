@@ -1,0 +1,15 @@
+.splash {
+}
+
+.container {
+  text-align: center;
+  // overflow: hidden;
+}
+
+svg.splash path {
+  fill: black;
+  fill-opacity: 1;
+  stroke: none;
+  fill-rule: nonzero;
+}
+

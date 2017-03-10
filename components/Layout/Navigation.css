@@ -1,0 +1,17 @@
+
+
+a.link {
+  font-face: 'Dosis', sans-serif;
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+  transition: all 0.2s;
+
+  &:active, &:visited, &:link {
+    color: black;
+  }
+  &:hover {
+   color: red;
+   transform: scale(1.1,1.1);
+  }
+}

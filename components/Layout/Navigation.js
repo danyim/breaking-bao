@@ -1,15 +1,7 @@
-/**
- * React Static Boilerplate
- * https://github.com/kriasoft/react-static-boilerplate
- *
- * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import React from 'react';
 import Link from '../Link';
+import Logo from '../Logo';
+import s from './Navigation.css';
 
 class Navigation extends React.Component {
 
@@ -24,8 +16,12 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="mdl-navigation" ref={node => (this.root = node)}>
-        <Link className="mdl-navigation__link" to="/">Home</Link>
-        <Link className="mdl-navigation__link" to="/about">About</Link>
+        <Link className={`mdl-navigation__link ${s.link}`} to="/">
+          <Logo width="75px" height="75px" />
+        </Link>
+        <Link className={`mdl-navigation__link ${s.link}`} to="/menu">Menu</Link>
+        <Link className={`mdl-navigation__link ${s.link}`} to="/location">Location</Link>
+        <Link className={`mdl-navigation__link ${s.link}`} to="/contact">Contact</Link>
       </nav>
     );
   }

@@ -1,27 +1,12 @@
-/**
- * React Static Boilerplate
- * https://github.com/kriasoft/react-static-boilerplate
- *
- * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Layout from '../../components/Layout';
+import Splash from '../../components/Splash';
 import s from './styles.css';
 import { title, html } from './index.md';
 
 class HomePage extends React.Component {
 
-  static propTypes = {
-    articles: PropTypes.arrayOf(PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }).isRequired).isRequired,
-  };
+  static propTypes = {};
 
   componentDidMount() {
     document.title = title;
@@ -30,18 +15,18 @@ class HomePage extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <div
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        <h4>Articles</h4>
-        <ul>
-          {this.props.articles.map(article =>
-            <li key={article.url}>
-              <a href={article.url}>{article.title}</a>
-            by {article.author}</li>,
-          )}
-        </ul>
+        <p>
+          <br /><br />
+        </p>
+        <div className={`mdl-grid ${s.centered}`}>
+          <div className="mdl-cell mdl-cell--8-col">
+            <Splash width={500} height={300} className="center" />
+            <div
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
+        </div>
         <p>
           <br /><br />
         </p>
