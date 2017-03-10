@@ -62,7 +62,7 @@ class LocationPage extends React.Component {
           </div>
           <div className="mdl-cell mdl-cell--4-col">
             <p>
-              Follow us on Twitter <a href="https://twitter.com/breakingbaotx" target="_blank">@breakingbaotx</a>
+              Follow us on Twitter <a href="https://twitter.com/breakingbaotx" target="_blank" rel="noopener noreferrer">@breakingbaotx</a>!
             </p>
             <Twitter
               user="breakingbaotx"
