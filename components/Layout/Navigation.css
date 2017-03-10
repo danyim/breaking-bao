@@ -1,4 +1,8 @@
-
+.logo {
+  &:hover path {
+    fill: #ff3b14;
+  }
+}
 
 a.link {
   font-face: 'Dosis', sans-serif;
@@ -11,7 +15,7 @@ a.link {
     color: black;
   }
   &:hover {
-   color: red;
+   color: #ff3b14;
    transform: scale(1.1,1.1);
   }
 }

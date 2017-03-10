@@ -1,14 +1,27 @@
-.splash {
-}
 
 .container {
   text-align: center;
 }
 
+svg.splash {
+  position: relative;
+  transition: all 0.2s ease-in;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  &:hover {
+    top: 3px;
+    opacity: .8;
+  }
+  &:hover path {
+    fill: black;
+  }
+}
+
 svg.splash path {
-  fill: black;
+  fill: #ff3b14;
   fill-opacity: 1;
   stroke: none;
   fill-rule: nonzero;
+  transition: all 0.2s ease-in-out;
 }
-
