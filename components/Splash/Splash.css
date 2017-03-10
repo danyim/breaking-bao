@@ -16,7 +16,7 @@ svg.splash {
     transform: scale(1.2,1.2);
   }
   &:hover path {
-    fill: #ff3b14;
+    fill: #ff4907;
     fill-opacity: 1;
   }
 }

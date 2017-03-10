@@ -1,3 +1,23 @@
+.abril {
+  font-family: 'Abril Fatface', serif;
+}
+.lobster {
+  font-family: 'Lobster', serif;
+}
+.satisfy {
+  font-family: 'Satisfy', serif;
+}
+.shadows {
+  font-family: 'Shadows Into Light', serif;
+}
+
+.rightAlign h1 {
+  text-align: right;
+}
+.rightAlign h5, .rightAlign ul {
+  margin-left: 42%;
+}
+
 @media screen and (max-width: 1024px) {
   .content {
     padding: 0 16px;

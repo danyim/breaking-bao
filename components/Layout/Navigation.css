@@ -1,6 +1,6 @@
 .logo {
   &:hover path {
-    fill: #ff3b14;
+    fill: #ff4907;
   }
 }
 
@@ -15,7 +15,7 @@ a.link {
     color: black;
   }
   &:hover {
-   color: #ff3b14;
+   color: #ff4907;
    transform: scale(1.1,1.1);
   }
 }
