@@ -44,8 +44,7 @@
 }
 
 .splash .fusion path {
-  fill-opacity: 0;
-  transition: transform .8s ease-in, fill-opacity .4s ease-in-out, fill 1s ease-in-out;
+  transition: transform .4s ease-in, fill-opacity .4s ease-in-out, fill 1s ease-in-out;
 }
 
 .splash .bun path {
