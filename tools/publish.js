@@ -1,9 +1,11 @@
 const path = require('path');
 // const firebase = require('firebase-tools');
-const ftp = require('ftp-deploy');
+const FtpDeploy = require('ftp-deploy');
 const build = require('./build');
 const task = require('./task');
 const config = require('./config');
+
+const ftp = new FtpDeploy();
 
 // // Build and deploy the app to Firebase
 // module.exports = task('deploy', () => Promise.resolve()
@@ -20,14 +22,18 @@ const ftpConfig = {
   password: config.ftp.password,
   host: config.ftp.host,
   port: config.ftp.port,
-  localRoot: path.resolve(__dirname, '../'),
+  localRoot: path.resolve(__dirname, '../public'),
   remoteRoot: config.ftp.remoteRoot,
 };
 
 module.exports = task('deploy', () => Promise.resolve()
   .then(() => build())
   .then(() => ftp.deploy(ftpConfig, (err) => {
-    if (err) console.log(err);
-    else console.log('finished');
-  }))
-  .then(() => { setTimeout(() => process.exit()); }));
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('finished');
+    }
+    process.exit();
+  })));
+  // .then(() => { setTimeout(() => ); }));
