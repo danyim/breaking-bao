@@ -4,7 +4,7 @@
     opacity: 1;
   }
   to {
-    width: 75%;
+    width: 60%;
     opacity: .75;
   }
 }
@@ -27,7 +27,7 @@
   display: block;
   position: absolute;
   margin-top: 5px;
-  width: 80%;
+  width: 60%;
   height: 5px;
   background-color: #000;
   opacity: .75;
