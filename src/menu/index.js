@@ -108,8 +108,8 @@ class MenuPage extends React.Component {
                 }}
               />
               <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
-                <h1 className={s.satisfy}>
-                  Thai Dai
+                <h1 className={s.shadows}>
+                  Thai-Dai
                 </h1>
                 <h5>Ingredients</h5>
                 <ul>
@@ -126,7 +126,7 @@ class MenuPage extends React.Component {
           <div className="mdl-cell mdl-cell--12-col mdl-cell--hide-phone mdl-cell--hide-tablet">
             <div className="mdl-grid">
               <div className={`mdl-cell mdl-cell--5-col-desktop ${s.rightAlign}`}>
-                <h1 className={s.shadows}>
+                <h1 className={s.satisfy}>
                   Sloppy Jack
                 </h1>
                 <h5>Ingredients</h5>
@@ -164,7 +164,7 @@ class MenuPage extends React.Component {
                 }}
               />
               <div className="mdl-cell mdl-cell--12-col-phone mdl-cell--7-col-tablet">
-                <h1 className={s.shadows}>
+                <h1 className={s.satisfy}>
                   Sloppy Jack
                 </h1>
                 <h5>Ingredients</h5>
