@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../components/Logo';
 import GoogleMap from '../../components/GoogleMap';
+import GoogleMapMarker from '../../components/GoogleMapMarker';
 import Twitter from '../../components/Twitter';
 import Layout from '../../components/Layout';
 import s from './styles.css';
@@ -13,18 +14,6 @@ class LocationPage extends React.Component {
   }
 
   render() {
-    const markerStyles = {
-      position: 'relative',
-      height: 90,
-      width: 205,
-      top: -20,
-      left: -30,
-      backgroundColor: 'white',
-      opacity: 0.8,
-      padding: 2,
-      textAlign: 'center',
-    };
-
     return (
       <Layout className={s.content}>
         <h3>{title}</h3>
@@ -39,25 +28,23 @@ class LocationPage extends React.Component {
               center={{ lat: 29.761993, lng: -95.366302 }}
               zoom={17}
             >
-              <div
-                style={markerStyles}
+              <GoogleMapMarker
                 lat={29.761993}
                 lng={-95.366302}
               >
                 <Logo width="60px" height="60px" />
                 <strong>Bao Bus One</strong><br />
                 123 Main, Houston, TX 77002
-              </div>
+              </GoogleMapMarker>
 
-              <div
-                style={markerStyles}
+              <GoogleMapMarker
                 lat={29.76293}
                 lng={-95.369}
               >
                 <Logo width="60px" height="60px" />
                 <strong>Breaking Bao Pop-up Event</strong><br />
                 175 Elgin, Houston, TX 77002
-              </div>
+              </GoogleMapMarker>
             </GoogleMap>
           </div>
           <div className="mdl-cell mdl-cell--4-col">

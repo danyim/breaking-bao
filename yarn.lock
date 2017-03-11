@@ -4245,13 +4245,9 @@ ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
 
-ms@0.7.2:
+ms@0.7.2, ms@^0.7.1:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
-
-ms@^0.7.1:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.3.tgz#708155a5e44e33f5fd0fc53e81d0d40a91be1fff"
 
 multimatch@^2.0.0:
   version "2.1.0"
@@ -4781,6 +4777,12 @@ postcss-colormin@^2.1.8:
     colormin "^1.0.5"
     postcss "^5.0.13"
     postcss-value-parser "^3.2.3"
+
+postcss-comment@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-comment/-/postcss-comment-1.0.3.tgz#3df031d27260b4864e3ab4022a78bb53bbaa52a2"
+  dependencies:
+    postcss "^5.0.10"
 
 postcss-convert-values@^2.3.4:
   version "2.6.1"

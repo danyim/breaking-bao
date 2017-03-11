@@ -54,6 +54,7 @@
     "postcss": "^5.2.10",
     "postcss-calc": "^5.3.1",
     "postcss-color-function": "^2.0.1",
+    "postcss-comment": "^1.0.3",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1",
     "postcss-custom-selectors": "^3.0.0",

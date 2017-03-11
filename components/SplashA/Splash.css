@@ -1,9 +1,10 @@
+@import '../../src/global.css';
 
 .container {
   text-align: center;
 }
 
-svg.splash {
+.splash {
   position: relative;
 
   &:hover .breakingBao path,
@@ -30,7 +31,7 @@ svg.splash {
   }
 }
 
-svg.splash path {
+.splash path {
   fill: #1b1b1c;
   fill-opacity: .6;
   stroke: none;
@@ -38,6 +39,17 @@ svg.splash path {
   transition: transform 0.4s ease-in-out, fill-opacity 0.4s ease-in-out, fill 1.2s ease-in-out;
 }
 
+.splash .breakingBao path {
+  fill-opacity: 1;
+}
+
+.splash .fusion path {
+  fill-opacity: 0;
+  transition: transform .8s ease-in, fill-opacity .4s ease-in-out, fill 1s ease-in-out;
+}
+
 .splash .bun path {
+  position: relative;
   fill: #511e0b;
+  transition: transform .4s ease-in, fill-opacity .4s ease-in-out, fill .3s ease-in;
 }

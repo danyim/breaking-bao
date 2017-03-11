@@ -42,6 +42,6 @@ module.exports = () => ({
     // Add vendor prefixes to CSS rules using values from caniuse.com
     // https://github.com/postcss/autoprefixer
     require('autoprefixer')(),
-    require('postcss-local-scope')(),
+    require('postcss-local-scope')()
   ],
 });

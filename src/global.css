@@ -1,0 +1,36 @@
+@keyframes :global(grow) {
+  from {
+    width: 10%;
+    opacity: 1;
+  }
+  to {
+    width: 75%;
+    opacity: .75;
+  }
+}
+
+@keyframes :global(bounce) {
+  from {
+    top: 0;
+  }
+  to {
+    top: -30px;
+  }
+}
+
+:global(h3) :global {
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+}
+
+:global(h3:after) :global {
+  display: block;
+  position: absolute;
+  margin-top: 5px;
+  width: 80%;
+  height: 5px;
+  background-color: #000;
+  opacity: .75;
+  content: "";
+  animation: 1.25s grow ease-in-out;
+}

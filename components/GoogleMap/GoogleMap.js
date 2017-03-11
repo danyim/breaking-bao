@@ -5,9 +5,9 @@ class GoogleMap extends React.Component {
 
   static propTypes = {
     center: PropTypes.shape({
-      lat: PropTypes.number,
-      lng: PropTypes.number,
-    }),
+      lat: PropTypes.number.isRequired,
+      lng: PropTypes.number.isRequired,
+    }).isRequired,
     zoom: PropTypes.number,
     width: PropTypes.string,
     height: PropTypes.string,
@@ -15,7 +15,6 @@ class GoogleMap extends React.Component {
   };
 
   static defaultProps = {
-    center: { lat: 29.761993, lng: -95.366302 },
     zoom: 11,
     width: '100%',
     height: '400px',
