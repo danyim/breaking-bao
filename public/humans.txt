@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Daniel Yim -- Lead Developer -- @danyim
 
 # THANKS
 
