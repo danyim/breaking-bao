@@ -2,20 +2,17 @@
   --color: #607d8b;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.logo {
+  transform: rotate(180deg);
+}
+
+svg.logo path {
+  fill: var(--color);
 }
 
 .content {
   padding-bottom: 80px;
+  text-align: center;
 }
 
 .code {
@@ -37,19 +34,7 @@
   line-height: 1em;
 }
 
-.text {
-  padding-bottom: 0;
-  color: color(var(--color) alpha(50%));
-  font-size: 1.125em;
-  line-height: 1.5em;
-}
-
 @media only screen and (max-width: 280px) {
-  .container,
-  .text {
-    width: 95%;
-  }
-
   .title {
     margin: 0 0 0.3em;
     font-size: 1.5em;
