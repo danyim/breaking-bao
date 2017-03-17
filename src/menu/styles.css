@@ -1,5 +1,11 @@
 @import '../global.css';
 
+ul.ingredients li {
+  font-family: 'Dosis', serif;
+  font-size: 16px;
+  // text-transform: uppercase;
+}
+
 .abril {
   font-family: 'Abril Fatface', serif;
 }

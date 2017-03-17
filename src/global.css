@@ -1,3 +1,15 @@
+:global(html, body) {
+  font-family: 'Dosis', serif;
+}
+
+:global(h5, h6) {
+  font-family: 'Dosis', serif;
+}
+
+:global(p) {
+  font-size: 16px;
+}
+
 @keyframes :global(grow) {
   from {
     width: 10%;

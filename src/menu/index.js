@@ -18,11 +18,12 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
-                  backgroundImage: 'url("http://www.seriouseats.com/images/2014/03/20140324-taiwaneats-porkbellybuns-finished.jpg")',
+                  backgroundImage: 'url("http://breakingbao.com/images/based.jpg")',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center middle',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: '0px center',
                   border: '1px solid black',
-                  minHeight: '250px',
+                  minHeight: '350px',
                 }}
               />
               <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
@@ -30,7 +31,7 @@ class MenuPage extends React.Component {
                   BA$ED
                 </h1>
                 <h5>Ingredients</h5>
-                <ul>
+                <ul className={s.ingredients}>
                   <li>Braised Pork Belly</li>
                   <li>Pickled Mustard Greens</li>
                   <li>Crushed Peanuts</li>
@@ -48,7 +49,7 @@ class MenuPage extends React.Component {
                   Laab City
                 </h1>
                 <h5>Ingredients</h5>
-                <ul>
+                <ul className={s.ingredients}>
                   <li>Thai Ground Beef</li>
                   <li>Pickled Cucumbers</li>
                   <li>Cilantro</li>
@@ -58,11 +59,12 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--7-col-desktop"
                 style={{
-                  backgroundImage: 'url("http://steamykitchen.com/wp-content/uploads/2012/07/pork-belly-buns-recipe-8380.jpg")',
+                  backgroundImage: 'url("http://breakingbao.com/images/laab.jpg")',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center middle',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: '0px center',
                   border: '1px solid black',
-                  minHeight: '250px',
+                  minHeight: '350px',
                 }}
               />
             </div>
@@ -73,11 +75,12 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
-                  backgroundImage: 'url("http://steamykitchen.com/wp-content/uploads/2012/07/pork-belly-buns-recipe-8380.jpg")',
+                  backgroundImage: 'url("http://breakingbao.com/images/laab.jpg")',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center middle',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: '0px center',
                   border: '1px solid black',
-                  minHeight: '250px',
+                  minHeight: '350px',
                 }}
               />
               <div className="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet">
@@ -85,7 +88,7 @@ class MenuPage extends React.Component {
                   Laab City
                 </h1>
                 <h5>Ingredients</h5>
-                <ul>
+                <ul className={s.ingredients}>
                   <li>Thai Ground Beef</li>
                   <li>Pickled Cucumbers</li>
                   <li>Cilantro</li>
@@ -100,11 +103,12 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
-                  backgroundImage: 'url("http://bucket.wowbao.com/wp-content/uploads/baobuns.jpg")',
+                  backgroundImage: 'url("http://breakingbao.com/images/tamchick.jpg")',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center middle',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: '0px center',
                   border: '1px solid black',
-                  minHeight: '250px',
+                  minHeight: '350px',
                 }}
               />
               <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
@@ -112,7 +116,7 @@ class MenuPage extends React.Component {
                   Thai-Dai
                 </h1>
                 <h5>Ingredients</h5>
-                <ul>
+                <ul className={s.ingredients}>
                   <li>Shredded Chicken</li>
                   <li>Thai Tamarind Sauce</li>
                   <li>Pickled Daikon</li>
@@ -130,7 +134,7 @@ class MenuPage extends React.Component {
                   Sloppy Jack
                 </h1>
                 <h5>Ingredients</h5>
-                <ul>
+                <ul className={s.ingredients}>
                   <li>Shredded Jack Fruit</li>
                   <li>Korean Fried Chicken Sauce</li>
                   <li>Pickled Carrots and Daikon</li>
@@ -141,11 +145,12 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--7-col-desktop"
                 style={{
-                  backgroundImage: 'url("http://cdnwp.audiencemedia.com/wp-content/uploads/2016/01/615296-1-eng-GB_how-to-make-bao-buns-960x420.jpg")',
+                  backgroundImage: 'url("http://breakingbao.com/images/sloppy.jpg")',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center middle',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: '0px center',
                   border: '1px solid black',
-                  minHeight: '250px',
+                  minHeight: '350px',
                 }}
               />
             </div>
@@ -156,11 +161,12 @@ class MenuPage extends React.Component {
               <div
                 className="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
-                  backgroundImage: 'url("http://cdnwp.audiencemedia.com/wp-content/uploads/2016/01/615296-1-eng-GB_how-to-make-bao-buns-960x420.jpg")',
+                  backgroundImage: 'url("http://breakingbao.com/images/sloppy.jpg")',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center middle',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: '0px center',
                   border: '1px solid black',
-                  minHeight: '250px',
+                  minHeight: '350px',
                 }}
               />
               <div className="mdl-cell mdl-cell--12-col-phone mdl-cell--7-col-tablet">
@@ -168,7 +174,7 @@ class MenuPage extends React.Component {
                   Sloppy Jack
                 </h1>
                 <h5>Ingredients</h5>
-                <ul>
+                <ul className={s.ingredients}>
                   <li>Shredded Jack Fruit</li>
                   <li>Korean Fried Chicken Sauce</li>
                   <li>Pickled Carrots and Daikon</li>
