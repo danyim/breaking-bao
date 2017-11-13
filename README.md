@@ -1,6 +1,10 @@
-# Breaking Bao
+<p align="center">
+  <img src="http://breakingbao.com/images/logo.png" alt="Breaking Bao Logo" align="center" height="200" />
+</p>
 
-Basic static site with Google Maps, a Twitter Feed, and Material Design lite. Scaffolded with the excellent [**React Static Boilerplate**](https://github.com/kriasoft/react-static-boilerplate).
+# Breaking Bao Website
+
+Basic static site with Google Maps, a Twitter Feed, and Material Design lite. Scaffolded with [**React Static Boilerplate**](https://github.com/kriasoft/react-static-boilerplate).
 
 ### Installation
 - `yarn install`
