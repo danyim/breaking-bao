@@ -11,9 +11,7 @@ class MenuPage extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h3>
-          {title}
-        </h3>
+        <h3>{title}</h3>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
             <div className="mdl-grid">
@@ -176,7 +174,7 @@ class MenuPage extends React.Component {
                 <h5>Ingredients</h5>
                 <ul className={s.ingredients}>
                   <li>Shredded Jack Fruit</li>
-                  <li>Korean Fried Chicken Sauce</li>
+                  <li>Spicy Kolonel Sauce</li>
                   <li>Pickled Carrots and Daikon</li>
                   <li>Green Onions</li>
                   <li>Sesame Seeds</li>
@@ -261,7 +259,7 @@ class MenuPage extends React.Component {
                 <h5>Ingredients</h5>
                 <ul className={s.ingredients}>
                   <li>Red Pepper Flakes</li>
-                  <li>Semi-Sweet Glaze Sauce</li>
+                  <li>Semi-Sweet Glaze</li>
                   <li>Cilantro</li>
                   <li>Sesame Seeds</li>
                 </ul>
