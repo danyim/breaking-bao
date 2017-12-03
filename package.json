@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "breaking-bao",
+  "version": "0.0.1",
   "private": true,
   "engines": {
     "node": ">=6",
@@ -79,14 +79,8 @@
     "webpack-hot-middleware": "^2.15.0"
   },
   "babel": {
-    "presets": [
-      "latest",
-      "stage-1",
-      "react"
-    ],
-    "plugins": [
-      "transform-runtime"
-    ]
+    "presets": ["latest", "stage-1", "react"],
+    "plugins": ["transform-runtime"]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
