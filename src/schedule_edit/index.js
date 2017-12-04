@@ -3,7 +3,7 @@ import Layout from '../../components/Layout'
 import s from './styles.css'
 import { title, html } from './index.md'
 
-class SchedulePage extends React.Component {
+class EditSchedule extends React.Component {
   componentDidMount() {
     document.title = title
   }
@@ -21,11 +21,19 @@ class SchedulePage extends React.Component {
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
+          <form>
+            <div className="mdl-textfield mdl-js-textfield">
+              <input
+                className="mdl-textfield__input"
+                type="text"
+                id="sample1"
+              />
+            </div>
+          </form>
         </div>
       </Layout>
     )
   }
 }
 
-export default SchedulePage
-
+export default EditSchedule

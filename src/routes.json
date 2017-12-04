@@ -18,6 +18,10 @@
     "page": "./schedule"
   },
   {
+    "path": "/schedule/edit",
+    "page": "./schedule_edit"
+  },
+  {
     "path": "/location",
     "page": "./location"
   },

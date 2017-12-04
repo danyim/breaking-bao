@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react'
 
 const markerStyle = {
   position: 'relative',
@@ -9,26 +9,25 @@ const markerStyle = {
   backgroundColor: 'white',
   opacity: 0.8,
   padding: 2,
-  textAlign: 'center',
-};
+  textAlign: 'center'
+}
 
 class GoogleMapMarker extends React.Component {
-
   static propTypes = {
-    children: PropTypes.node,
-  };
+    children: PropTypes.node
+  }
 
   static defaultProps = {
-    children: null,
-  };
+    children: null
+  }
 
   render() {
     return (
       <div style={markerStyle}>
-        { this.props.children }
+        {this.props.children}
       </div>
-    );
+    )
   }
 }
 
-export default GoogleMapMarker;
+export default GoogleMapMarker
