@@ -44,5 +44,11 @@
 
   .content {
     padding: 0;
+    overflow: scroll;
+
+    & > :global(.mdl-cell) {
+      min-height: 200vh;
+      overflow: scroll;
+    }
   }
 }

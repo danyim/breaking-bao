@@ -21,10 +21,6 @@ class SchedulePage extends React.Component {
           format(k.start_date, 'ddd MMM DD')
         )
       })
-      console.log(this.state.eventsGroupedByDay)
-      console.log(
-        forOwn(this.state.eventsGroupedByDay, (v, k) => console.log(k, v))
-      )
     })
   }
 
@@ -60,6 +56,7 @@ class SchedulePage extends React.Component {
                 </div>
               )}
             */}
+            {this.state.events.length === 0 && <div>Loading events...</div>}
             {this.state.events.map(e =>
               <section className={s.event} key={e.id}>
                 <header>

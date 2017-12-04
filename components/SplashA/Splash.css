@@ -16,16 +16,19 @@
   &:hover .breakingBao path {
     transform: translate(0, -5px);
   }
+
   &:hover .bun path {
-    fill: #e2460d;
-    transform: scale(1.05,1.05) translate(-15px, -22px);
+    transform: scale(1.05, 1.05) translate(-15px, -22px);
   }
+
   &:hover .estd path {
     transform: translate(-10px, 0);
   }
+
   &:hover .twenty path {
     transform: translate(10px, 0);
   }
+
   &:hover .fusion path {
     transform: translate(0, 5px);
   }
@@ -33,7 +36,7 @@
 
 .splash path {
   fill: #1b1b1c;
-  fill-opacity: .6;
+  fill-opacity: 0.6;
   stroke: none;
   fill-rule: nonzero;
   transition: transform 0.4s ease-in-out, fill-opacity 0.4s ease-in-out, fill 1.2s ease-in-out;
@@ -44,11 +47,11 @@
 }
 
 .splash .fusion path {
-  transition: transform .4s ease-in, fill-opacity .4s ease-in-out, fill 1s ease-in-out;
+  transition: transform 0.4s ease-in, fill-opacity 0.4s ease-in-out, fill 1s ease-in-out;
 }
 
 .splash .bun path {
   position: relative;
-  fill: #511e0b;
-  transition: transform .4s ease-in, fill-opacity .4s ease-in-out, fill .3s ease-in;
+  fill: #e2460d;
+  transition: transform 0.4s ease-in, fill-opacity 0.4s ease-in-out, fill 0.3s ease-in;
 }
