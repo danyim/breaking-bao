@@ -2,11 +2,13 @@
 
 .event {
   margin-bottom: 40px;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
 
   & > header {
     margin-bottom: 0;
-    font-size: 24px;
-    line-height: 44px;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
     display: flex;
     flex-flow: row wrap;
 
@@ -23,19 +25,15 @@
 
   & div[name='time'] {
     font-weight: bold;
-    font-size: 1.5rem;
     margin: 10px 0;
   }
 
   & div[name='location'] {
     margin: 5px 0;
-    font-size: 1.5rem;
-    line-height: 1.9rem;
   }
 
   & div[name='description'] {
     margin: 5px 0;
-    font-size: 1.5rem;
   }
 }
 

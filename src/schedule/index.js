@@ -1,4 +1,5 @@
 import React from 'react'
+import { groupBy, forOwn } from 'lodash'
 import { format, distanceInWordsStrict } from 'date-fns'
 import Layout from '../../components/Layout'
 import s from './styles.css'
@@ -7,17 +8,27 @@ import { title } from './index.md'
 
 class SchedulePage extends React.Component {
   state = {
-    events: []
+    events: [],
+    eventsGroupedByDay: null
   }
 
   componentDidMount() {
     document.title = title
     getEvents().then(e => {
-      this.setState({ events: e.data.events })
+      this.setState({
+        events: e.data.events,
+        eventsGroupedByDay: groupBy(e.data.events, k =>
+          format(k.start_date, 'ddd MMM DD')
+        )
+      })
+      console.log(this.state.eventsGroupedByDay)
+      console.log(
+        forOwn(this.state.eventsGroupedByDay, (v, k) => console.log(k, v))
+      )
     })
   }
 
-  dashSeparate(...values) {
+  delimit(...values) {
     return delimiter =>
       values.reduce((acc, val) => {
         if (acc === ' ') {
@@ -42,6 +53,12 @@ class SchedulePage extends React.Component {
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: html }}
             />
+            {this.state.eventsGroupedByDay !== null &&
+              forOwn(this.state.eventsGroupedByDay, (v, k) =>
+                <div>
+                  {k}
+                </div>
+              )}
             */}
             {this.state.events.map(e =>
               <section className={s.event} key={e.id}>
@@ -52,33 +69,43 @@ class SchedulePage extends React.Component {
                     </strong>
                   </mark>
                   <mark>
-                    <span dangerouslySetInnerHTML={{ __html: e.title }} />
+                    <span
+                      // eslint-disable-next-line react/no-danger
+                      dangerouslySetInnerHTML={{ __html: e.title }}
+                    />
                   </mark>
                 </header>
                 <div name="time">
                   {format(e.start_date, 'h:mm a')} -{' '}
                   {format(e.end_date, 'h:mm a')} ({distanceInWordsStrict(e.start_date, e.end_date)})
                 </div>
-                {!Array.isArray(e.venue) &&
-                  <a
-                    href={`https://maps.google.com/?q=${this.dashSeparate(
-                      e.venue.address,
-                      e.venue.city,
-                      e.venue.zip
-                    )(', ')}`}
-                  >
-                    <div
-                      name="location"
-                      dangerouslySetInnerHTML={{
-                        __html: this.dashSeparate(
-                          e.venue.venue,
-                          e.venue.address,
-                          e.venue.city,
-                          e.venue.zip
-                        )(', ')
-                      }}
-                    />
+                {e.website &&
+                  <a href={e.website} rel="noopener noreferrer" target="_blank">
+                    Event Website
                   </a>}
+                {!Array.isArray(e.venue) &&
+                  <div name="location">
+                    {e.venue.venue}
+                    {' @ '}
+                    <a
+                      href={`https://maps.google.com/?q=${this.delimit(
+                        e.venue.address,
+                        e.venue.city,
+                        e.venue.zip
+                      )(', ')}`}
+                    >
+                      <span
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{
+                          __html: this.delimit(
+                            e.venue.address,
+                            e.venue.city,
+                            `${e.venue.state} ${e.venue.zip}`
+                          )(', ')
+                        }}
+                      />
+                    </a>
+                  </div>}
 
                 <div
                   name="description"
