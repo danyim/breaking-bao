@@ -1,15 +1,23 @@
 @import '../global.css';
 
 .event {
-  margin-bottom: 50px 0;
+  margin-bottom: 40px;
 
-  & > h4 {
+  & > header {
     margin-bottom: 0;
+    font-size: 24px;
+    line-height: 44px;
+    display: flex;
+    flex-flow: row wrap;
 
     & mark {
-      padding: 7px;
-      background-color: #ff4907;
+      padding: 10px 7px;
+      background-color: black;
       color: white;
+    }
+
+    & > mark[name='accent'] {
+      background-color: #ff4907;
     }
   }
 
@@ -17,6 +25,12 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin: 10px 0;
+  }
+
+  & div[name='location'] {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
   }
 
   & div[name='description'] {

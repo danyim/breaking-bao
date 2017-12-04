@@ -18,14 +18,15 @@ class SchedulePage extends React.Component {
   }
 
   dashSeparate(...values) {
-    return values.reduce((acc, val) => {
-      if (acc === ' ') {
-        return `${val}`
-      } else if (val) {
-        return `${acc} - ${val}`
-      }
-      return acc
-    }, ' ')
+    return delimiter =>
+      values.reduce((acc, val) => {
+        if (acc === ' ') {
+          return `${val}`
+        } else if (val) {
+          return `${acc}${delimiter}${val}`
+        }
+        return acc
+      }, ' ')
   }
 
   render() {
@@ -44,17 +45,41 @@ class SchedulePage extends React.Component {
             */}
             {this.state.events.map(e =>
               <section className={s.event} key={e.id}>
-                <h4>
+                <header>
+                  <mark name="accent">
+                    <strong>
+                      {format(e.start_date, 'ddd MMM DD')}
+                    </strong>
+                  </mark>
                   <mark>
-                    <strong>{format(e.start_date, 'ddd MMM DD')}</strong>{' '}
-                    &raquo;{' '}
                     <span dangerouslySetInnerHTML={{ __html: e.title }} />
                   </mark>
-                </h4>
+                </header>
                 <div name="time">
                   {format(e.start_date, 'h:mm a')} -{' '}
                   {format(e.end_date, 'h:mm a')} ({distanceInWordsStrict(e.start_date, e.end_date)})
                 </div>
+                {!Array.isArray(e.venue) &&
+                  <a
+                    href={`https://maps.google.com/?q=${this.dashSeparate(
+                      e.venue.address,
+                      e.venue.city,
+                      e.venue.zip
+                    )(', ')}`}
+                  >
+                    <div
+                      name="location"
+                      dangerouslySetInnerHTML={{
+                        __html: this.dashSeparate(
+                          e.venue.venue,
+                          e.venue.address,
+                          e.venue.city,
+                          e.venue.zip
+                        )(', ')
+                      }}
+                    />
+                  </a>}
+
                 <div
                   name="description"
                   dangerouslySetInnerHTML={{ __html: e.description }}
