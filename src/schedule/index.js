@@ -32,7 +32,7 @@ class SchedulePage extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h3>
+        <h3 className={s.pageTitle}>
           {title}
         </h3>
         <div className="mdl-grid">

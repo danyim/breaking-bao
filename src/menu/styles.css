@@ -9,23 +9,31 @@ ul.ingredients li {
 .abril {
   font-family: 'Abril Fatface', serif;
 }
+
 .lobster {
   font-family: 'Lobster', serif;
 }
+
 .satisfy {
   font-family: 'Satisfy', serif;
 }
+
 .shadows {
   font-family: 'Shadows Into Light', serif;
 }
 
 .rightAlign h1,
-.rightAlign h5, .rightAlign ul {
+.rightAlign h5,
+.rightAlign ul {
   margin-left: 35%;
 }
 
 @media screen and (max-width: 1024px) {
+  .pageTitle {
+    padding: 0 12px;
+  }
+
   .content {
-    padding: 0 16px;
+    padding: 0;
   }
 }

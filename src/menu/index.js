@@ -11,7 +11,9 @@ class MenuPage extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h3>{title}</h3>
+        <h3 className={s.pageTitle}>
+          {title}
+        </h3>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
             <div className="mdl-grid">

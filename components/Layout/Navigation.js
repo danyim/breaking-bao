@@ -38,11 +38,11 @@ class Navigation extends React.Component {
         </Link>
         <Link
           className={`mdl-navigation__link ${s.link} ${cx({
-            [`${s.active}`]: history.location.pathname === '/location'
+            [`${s.active}`]: history.location.pathname === '/contact'
           })}`}
-          to="/location"
+          to="/contact"
         >
-          Location / Contact
+          Contact
         </Link>
         {
           //<Link className={`mdl-navigation__link ${s.link}`} to="/contact">Contact</Link>
