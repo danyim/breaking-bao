@@ -4,9 +4,7 @@ import s from './Splash.css'
 
 class SplashA extends React.Component {
   static propTypes = {
-    className: PropTypes.string,
-    width: PropTypes.number,
-    height: PropTypes.number
+    className: PropTypes.string
   }
 
   static defaultProps = {
