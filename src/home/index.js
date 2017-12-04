@@ -1,22 +1,22 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import SplashA from '../../components/SplashA';
-import s from './styles.css';
-import { title, html } from './index.md';
+import React from 'react'
+import Layout from '../../components/Layout'
+import SplashA from '../../components/SplashA'
+import s from './styles.css'
+import { title, html } from './index.md'
 
 class HomePage extends React.Component {
-
-  static propTypes = {};
+  static propTypes = {}
 
   componentDidMount() {
-    document.title = title;
+    document.title = title
   }
 
   render() {
     return (
       <Layout className={s.content}>
         <p>
-          <br /><br />
+          <br />
+          <br />
         </p>
         <div className={`mdl-grid ${s.centered}`}>
           <div className="mdl-cell mdl-cell--10-col">
@@ -28,12 +28,12 @@ class HomePage extends React.Component {
           </div>
         </div>
         <p>
-          <br /><br />
+          <br />
+          <br />
         </p>
       </Layout>
-    );
+    )
   }
-
 }
 
-export default HomePage;
+export default HomePage

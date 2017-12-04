@@ -3,7 +3,10 @@
 }
 
 .logo {
-  font-size: .9rem;
-  font-style: italic;
-  color: #efefef;
+  font-size: 0.9rem;
+  color: #ddd;
+
+  & > a {
+    color: #ddd;
+  }
 }
