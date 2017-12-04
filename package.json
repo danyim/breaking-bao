@@ -7,11 +7,14 @@
     "npm": ">=3.8"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
+    "date-fns": "^1.29.0",
     "fastclick": "^1.0.6",
     "google-map-react": "^0.23.0",
     "history": "^4.5.1",
+    "html-entities": "^1.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-mdl": "^1.9.0",
@@ -79,8 +82,14 @@
     "webpack-hot-middleware": "^2.15.0"
   },
   "babel": {
-    "presets": ["latest", "stage-1", "react"],
-    "plugins": ["transform-runtime"]
+    "presets": [
+      "latest",
+      "stage-1",
+      "react"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -88,9 +97,11 @@
     "rules": {
       "semi": 0,
       "comma-dangle": 0,
+      "arrow-parens": 0,
       "react/jsx-filename-extension": "off",
       "react/require-default-props": "off",
-      "import/no-extraneous-dependencies": "off"
+      "import/no-extraneous-dependencies": "off",
+      "import/prefer-default-export": "off"
     },
     "env": {
       "browser": true

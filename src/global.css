@@ -15,9 +15,10 @@
     width: 10%;
     opacity: 1;
   }
+
   to {
     width: 60%;
-    opacity: .75;
+    opacity: 0.75;
   }
 }
 
@@ -25,6 +26,7 @@
   from {
     top: 0;
   }
+
   to {
     top: -30px;
   }
@@ -42,7 +44,7 @@
   width: 60%;
   height: 5px;
   background-color: #000;
-  opacity: .75;
-  content: "";
+  opacity: 0.75;
+  content: '';
   animation: 1.25s grow ease-in-out;
 }
