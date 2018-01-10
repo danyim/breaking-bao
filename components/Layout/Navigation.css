@@ -11,19 +11,22 @@ a.link {
   text-transform: uppercase;
   transition: all 0.2s;
 
-  &:active, &:visited, &:link {
+  &:active,
+  &:visited,
+  &:link {
     color: black;
   }
+
   &:hover {
-   color: #ff4907;
-   transform: scale(1.1,1.1);
+    color: #ff4907;
+    transform: scale(1.1, 1.1);
   }
 }
-
 
 a.link.active {
   font-weight: 800;
   color: #c0c0c0;
+
   &:hover {
     color: #c0c0c0;
     transform: none;
