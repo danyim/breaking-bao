@@ -48,12 +48,13 @@ class MenuPage extends React.Component {
               <div
                 className={`mdl-cell mdl-cell--5-col-desktop ${s.rightAlign}`}
               >
-                <h1 className={s.lobster}>Laab City</h1>
+                <h1 className={s.shadows}>The Kolonel</h1>
                 <h5>Ingredients</h5>
                 <ul className={s.ingredients}>
-                  <li>Thai Ground Beef</li>
-                  <li>Pickled Cucumbers</li>
-                  <li>Cilantro</li>
+                  <li>Fried Chicken</li>
+                  <li>Spicy Kolonel Sauce</li>
+                  <li>Pickled Carrots &amp; Daikon</li>
+                  <li>Green Onion</li>
                   <li>Sesame Seeds</li>
                 </ul>
               </div>
@@ -61,7 +62,7 @@ class MenuPage extends React.Component {
                 className="mdl-cell mdl-cell--7-col-desktop"
                 style={{
                   backgroundImage:
-                    'url("http://breakingbao.com/images/laab.jpg")',
+                    'url("http://breakingbao.com/images/kfc.jpg")',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: '0px center',
@@ -78,7 +79,7 @@ class MenuPage extends React.Component {
                 className="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
                   backgroundImage:
-                    'url("http://breakingbao.com/images/laab.jpg")',
+                    'url("http://breakingbao.com/images/kfc.jpg")',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: '0px center',
@@ -87,12 +88,13 @@ class MenuPage extends React.Component {
                 }}
               />
               <div className="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet">
-                <h1 className={s.lobster}>Laab City</h1>
+                <h1 className={s.shadows}>The Kolonel</h1>
                 <h5>Ingredients</h5>
                 <ul className={s.ingredients}>
-                  <li>Thai Ground Beef</li>
-                  <li>Pickled Cucumbers</li>
-                  <li>Cilantro</li>
+                  <li>Fried Chicken</li>
+                  <li>Spicy Kolonel Sauce</li>
+                  <li>Pickled Carrots &amp; Daikon</li>
+                  <li>Green Onion</li>
                   <li>Sesame Seeds</li>
                 </ul>
               </div>
@@ -191,7 +193,7 @@ class MenuPage extends React.Component {
                 className="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet"
                 style={{
                   backgroundImage:
-                    'url("http://breakingbao.com/images/kfc.jpg")',
+                    'url("http://breakingbao.com/images/laab.jpg")',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: '0px center',
@@ -200,13 +202,12 @@ class MenuPage extends React.Component {
                 }}
               />
               <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
-                <h1 className={s.shadows}>The Kolonel</h1>
+                <h1 className={s.lobster}>Laab City</h1>
                 <h5>Ingredients</h5>
                 <ul className={s.ingredients}>
-                  <li>Fried Chicken</li>
-                  <li>Spicy Kolonel Sauce</li>
-                  <li>Pickled Carrots &amp; Daikon</li>
-                  <li>Green Onion</li>
+                  <li>Thai Ground Beef</li>
+                  <li>Pickled Cucumbers</li>
+                  <li>Cilantro</li>
                   <li>Sesame Seeds</li>
                 </ul>
               </div>

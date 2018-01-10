@@ -24,14 +24,28 @@ class ContactPage extends React.Component {
           </div>
           <div className="mdl-cell mdl-cell--4-col">
             <p>
-              Follow us on Twitter{' '}
+              Follow us @breakingbaotx on{' '}
               <a
                 href="https://twitter.com/breakingbaotx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @breakingbaotx
-              </a>!
+                Twitter
+              </a>,{' '}
+              <a
+                href="https://instagram.com/breakingbaotx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>,{' '}
+              <a
+                href="https://facebook.com/breakingbaotx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>, and Snapchat!
             </p>
             <Twitter
               user="breakingbaotx"
