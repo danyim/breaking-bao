@@ -18,6 +18,10 @@
     "page": "./schedule"
   },
   {
+    "path": "/press",
+    "page": "./press"
+  },
+  {
     "path": "/location",
     "page": "./location"
   },
@@ -29,7 +33,8 @@
     "path": "/tasks/:status(pending|completed)?",
     "page": "./home",
     "data": {
-      "articles": "GET https://gist.githubusercontent.com/koistya/a32919e847531320675764e7308b796a/raw/articles.json"
+      "articles":
+        "GET https://gist.githubusercontent.com/koistya/a32919e847531320675764e7308b796a/raw/articles.json"
     }
   }
 ]

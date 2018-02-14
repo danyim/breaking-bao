@@ -38,6 +38,14 @@ class Navigation extends React.Component {
         </Link>
         <Link
           className={`mdl-navigation__link ${s.link} ${cx({
+            [`${s.active}`]: history.location.pathname === '/press'
+          })}`}
+          to="/press"
+        >
+          Press
+        </Link>
+        <Link
+          className={`mdl-navigation__link ${s.link} ${cx({
             [`${s.active}`]: history.location.pathname === '/contact'
           })}`}
           to="/contact"
