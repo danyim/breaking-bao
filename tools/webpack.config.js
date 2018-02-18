@@ -101,8 +101,10 @@ const config = {
               // CSS Modules https://github.com/css-modules/css-modules
               modules: true,
               localIdentName: isDebug
-                ? '[name]_[local]_[hash:base64:3]'
+                ? '[local]' // '[name]__[local]--[hash:base64:5]'
                 : '[hash:base64:4]',
+              // getLocalIdent: (context, localIdentName, localName, options) =>
+              //   localName,
               // CSS Nano http://cssnano.co/options/
               minimize: !isDebug
             }

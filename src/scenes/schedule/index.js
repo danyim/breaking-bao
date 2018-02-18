@@ -89,6 +89,7 @@ class SchedulePage extends Component {
 
                 <div
                   name="description"
+                  // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: e.description }}
                 />
               </section>

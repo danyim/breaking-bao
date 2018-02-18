@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Twitter from '../../components/Twitter'
+import Twitter from '../../components/Twitter/Twitter'
 import Layout from '../../components/Layout/Layout'
 import s from './styles.css'
 import { title, html } from './index.md'

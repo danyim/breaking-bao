@@ -2,12 +2,21 @@
   font-family: 'Dosis', serif;
 }
 
+:global(*) {
+  box-sizing: border-box;
+}
+
 :global(h5, h6) {
   font-family: 'Dosis', serif;
 }
 
 :global(p) {
   font-size: 16px;
+}
+
+:global(a) {
+  color: #ff4081;
+  font-weight: 500;
 }
 
 @keyframes :global(grow) {

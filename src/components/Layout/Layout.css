@@ -3,3 +3,13 @@
   max-width: 1000px;
   width: 100%;
 }
+
+.layout {
+  display: grid;
+}
+
+.layout > header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+}

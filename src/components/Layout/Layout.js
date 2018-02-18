@@ -12,20 +12,15 @@ class Layout extends Component {
 
   render() {
     return (
-      <div
-        className="mdl-layout mdl-js-layout"
-        ref={node => (this.root = node)}
-      >
-        <div className="mdl-layout__inner-container">
-          <Header />
-          <main className="mdl-layout__content">
-            <div
-              {...this.props}
-              className={cx(s.content, this.props.className)}
-            />
-            <Footer />
-          </main>
-        </div>
+      <div className={s.layout} ref={node => (this.root = node)}>
+        <Header />
+        <main className="mdl-layout__content">
+          <div
+            {...this.props}
+            className={cx(s.content, this.props.className)}
+          />
+          <Footer />
+        </main>
       </div>
     )
   }
