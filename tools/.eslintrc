@@ -3,6 +3,8 @@
     "global-require": "off",
     "no-console": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "function-paren-newline": "off"
+    "function-paren-newline": "off",
+    "object-curly-newline": "off",
+    "react/jsx-wrap-multilines": "off"
   }
 }

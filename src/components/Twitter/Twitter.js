@@ -1,44 +1,45 @@
-import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 export default class Twitter extends Component {
   static propTypes = {
     widgetId: PropTypes.string,
     user: PropTypes.string,
     chrome: PropTypes.string,
-    limit: PropTypes.number,
-  };
+    limit: PropTypes.number
+  }
 
   constructor(props) {
-    super(props);
-    this.state = ({ initialized: false });
+    super(props)
+    this.state = { initialized: false }
   }
 
   componentDidMount() {
     if (this.state.initialized) {
-      return;
+      return
     }
 
     if (typeof twttr === 'undefined') {
-      const twittertimeline = ReactDOM.findDOMNode(this.refs.twittertimeline);
-      const twitterscript = document.createElement('script');
-      twitterscript.src = '//platform.twitter.com/widgets.js';
-      twitterscript.async = true;
-      twitterscript.id = 'twitter-wjs';
-      twittertimeline.parentNode.appendChild(twitterscript);
+      const twittertimeline = ReactDOM.findDOMNode(this.refs.twittertimeline)
+      const twitterscript = document.createElement('script')
+      twitterscript.src = '//platform.twitter.com/widgets.js'
+      twitterscript.async = true
+      twitterscript.id = 'twitter-wjs'
+      twittertimeline.parentNode.appendChild(twitterscript)
     } else {
-      twttr.widgets.load();
+      twttr.widgets.load()
     }
 
-    this.initialized();
+    this.initialized()
   }
 
   initialized() {
-    this.setState({ initialized: true });
+    this.setState({ initialized: true })
   }
 
   render() {
-    const { user, widgetId, chrome, limit } = this.props;
+    const { user, widgetId, chrome, limit } = this.props
     return (
       <a
         ref="twittertimeline"
@@ -48,6 +49,6 @@ export default class Twitter extends Component {
         data-chrome={chrome}
         data-tweet-limit={limit}
       />
-    );
+    )
   }
 }

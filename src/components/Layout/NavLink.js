@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import history from '../history'
+import history from '../../history'
 
-class Link extends Component {
+class NavLink extends Component {
   static propTypes = {
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     onClick: PropTypes.func
@@ -50,4 +50,4 @@ class Link extends Component {
   }
 }
 
-export default Link
+export default NavLink

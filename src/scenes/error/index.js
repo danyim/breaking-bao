@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import history from '../../history'
 import Layout from '../../components/Layout/Layout'
 import Logo from '../../components/Logo'
-import Link from '../../components/Link'
 import s from './styles.css'
 
 class ErrorPage extends Component {
