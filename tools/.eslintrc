@@ -2,6 +2,7 @@
   "rules": {
     "global-require": "off",
     "no-console": "off",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "function-paren-newline": "off"
   }
 }
