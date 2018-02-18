@@ -9,10 +9,7 @@ class Header extends Component {
         className={`mdl-layout__header mdl-layout__header--transparent ${s.header}`}
         ref={node => (this.root = node)}
       >
-        <div className={`mdl-layout__header-row ${s.row}`}>
-          <div className="mdl-layout-spacer" />
-          <Navigation />
-        </div>
+        <Navigation />
       </header>
     )
   }
