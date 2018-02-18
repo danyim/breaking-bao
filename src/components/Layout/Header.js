@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Navigation from './Navigation'
 import s from './Header.css'
 
-class Header extends React.Component {
+class Header extends Component {
   render() {
     return (
       <header

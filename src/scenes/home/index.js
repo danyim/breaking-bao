@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Layout from '../../components/Layout/Layout'
 import Splash from '../../components/Splash/Splash'
 import s from './styles.css'
 import { title, html } from './index.md'
 
-class HomePage extends React.Component {
+class HomePage extends Component {
   static propTypes = {}
 
   componentDidMount() {

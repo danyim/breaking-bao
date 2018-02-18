@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import s from './Logo.css'
 
-class Logo extends React.Component {
+class Logo extends Component {
   static propTypes = {
     className: PropTypes.string,
     width: PropTypes.string,

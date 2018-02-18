@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Logo from '../../components/Logo'
 import GoogleMap from '../../components/GoogleMap'
 import GoogleMapMarker from '../../components/GoogleMapMarker'
@@ -7,7 +7,7 @@ import Layout from '../../components/Layout/Layout'
 import s from './styles.css'
 import { title, html } from './index.md'
 
-class LocationPage extends React.Component {
+class LocationPage extends Component {
   componentDidMount() {
     document.title = title
   }

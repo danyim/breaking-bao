@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import s from './Splash.css'
 
-class SplashA extends React.Component {
+class SplashA extends Component {
   static propTypes = {
     className: PropTypes.string
   }

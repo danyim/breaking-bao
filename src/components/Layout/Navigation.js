@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from '../Link'
 import Logo from '../Logo'
 import history from '../../history'
 import cx from 'classnames'
 import s from './Navigation.css'
 
-class Navigation extends React.Component {
+class Navigation extends Component {
   render() {
     return (
       <nav className="mdl-navigation" ref={node => (this.root = node)}>

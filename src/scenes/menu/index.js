@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Layout from '../../components/Layout/Layout'
 import s from './styles.css'
 import { title, html } from './index.md'
 
-class MenuPage extends React.Component {
+class MenuPage extends Component {
   componentDidMount() {
     document.title = title
   }

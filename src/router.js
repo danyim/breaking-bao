@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 function decodeParam(val) {
   if (!(typeof val === 'string' || val.length === 0)) {

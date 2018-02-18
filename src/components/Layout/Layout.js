@@ -1,10 +1,11 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Header from './Header'
 import Footer from './Footer'
 import s from './Layout.css'
 
-class Layout extends React.Component {
+class Layout extends Component {
   static propTypes = {
     className: PropTypes.string
   }

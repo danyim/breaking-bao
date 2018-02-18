@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 const markerStyle = {
   position: 'relative',
@@ -12,7 +13,7 @@ const markerStyle = {
   textAlign: 'center'
 }
 
-class GoogleMapMarker extends React.Component {
+class GoogleMapMarker extends Component {
   static propTypes = {
     children: PropTypes.node
   }

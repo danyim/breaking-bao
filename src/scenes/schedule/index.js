@@ -1,30 +1,12 @@
-import React from 'react'
-import { groupBy, forOwn } from 'lodash'
+import React, { Component } from 'react'
 import { format, distanceInWordsStrict } from 'date-fns'
 import Layout from '../../components/Layout/Layout'
 import s from './styles.css'
 import { getEvents } from '../../api'
 import { title } from './index.md'
 
-class SchedulePage extends React.Component {
-  state = {
-    events: [],
-    eventsGroupedByDay: null
-  }
-
-  componentDidMount() {
-    document.title = title
-    getEvents().then(e => {
-      this.setState({
-        events: e.data.events,
-        eventsGroupedByDay: groupBy(e.data.events, k =>
-          format(k.start_date, 'ddd MMM DD')
-        )
-      })
-    })
-  }
-
-  delimit(...values) {
+class SchedulePage extends Component {
+  static delimit(...values) {
     return delimiter =>
       values.reduce((acc, val) => {
         if (acc === ' ') {
@@ -36,6 +18,19 @@ class SchedulePage extends React.Component {
       }, ' ')
   }
 
+  state = {
+    events: []
+  }
+
+  componentDidMount() {
+    document.title = title
+    getEvents().then(e => {
+      this.setState({
+        events: e.data.events
+      })
+    })
+  }
+
   render() {
     return (
       <Layout className={s.content}>
@@ -44,18 +39,6 @@ class SchedulePage extends React.Component {
         </h3>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
-            {/*
-            <div
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-            {this.state.eventsGroupedByDay !== null &&
-              forOwn(this.state.eventsGroupedByDay, (v, k) =>
-                <div>
-                  {k}
-                </div>
-              )}
-            */}
             {this.state.events.length === 0 && <div>Loading events...</div>}
             {this.state.events.map(e =>
               <section className={s.event} key={e.id}>
@@ -85,7 +68,7 @@ class SchedulePage extends React.Component {
                     {e.venue.venue}
                     {' @ '}
                     <a
-                      href={`https://maps.google.com/?q=${this.delimit(
+                      href={`https://maps.google.com/?q=${SchedulePage.delimit(
                         e.venue.address,
                         e.venue.city,
                         e.venue.zip
@@ -94,7 +77,7 @@ class SchedulePage extends React.Component {
                       <span
                         // eslint-disable-next-line react/no-danger
                         dangerouslySetInnerHTML={{
-                          __html: this.delimit(
+                          __html: SchedulePage.delimit(
                             e.venue.address,
                             e.venue.city,
                             `${e.venue.state} ${e.venue.zip}`

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Layout from '../../components/Layout/Layout'
 import s from './styles.css'
 import { title } from './index.md'

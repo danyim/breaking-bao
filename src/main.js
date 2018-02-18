@@ -1,7 +1,7 @@
 import 'babel-polyfill'
 import 'whatwg-fetch'
 
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import FastClick from 'fastclick'
 import { Provider } from 'react-redux'

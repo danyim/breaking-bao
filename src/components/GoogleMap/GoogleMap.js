@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import GoogleMapReact from 'google-map-react'
 
-class GoogleMap extends React.Component {
+class GoogleMap extends Component {
   static propTypes = {
     center: PropTypes.shape({
       lat: PropTypes.number.isRequired,
