@@ -1,26 +1,37 @@
-:global(html, body) {
+@import './_icons.css';
+
+html,
+body {
   font-family: 'Dosis', serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
-:global(*) {
-  box-sizing: border-box;
-}
-
-:global(h5, h6) {
-  font-family: 'Dosis', serif;
-}
-
-:global(p) {
-  font-size: 16px;
-}
-
-:global(a) {
+a {
   color: #ff4081;
   font-weight: 500;
 }
 
-@keyframes :global(grow) {
+* {
+  box-sizing: border-box;
+}
+
+h5,
+h6 {
+  font-family: 'Dosis', serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #ff4081;
+  font-weight: 500;
+}
+
+@keyframes grow {
   from {
     width: 10%;
     opacity: 1;
@@ -32,7 +43,7 @@
   }
 }
 
-@keyframes :global(bounce) {
+@keyframes bounce {
   from {
     top: 0;
   }
@@ -42,12 +53,14 @@
   }
 }
 
-:global(h3) :global {
+h3 {
   font-family: 'Dosis', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
-:global(h3:after) :global {
+h3:after {
   display: block;
   position: absolute;
   margin-top: 5px;
@@ -56,5 +69,5 @@
   background-color: #000;
   opacity: 0.75;
   content: '';
-  animation: 1.25s global(grow) ease-in-out;
+  animation: 1.25s grow ease-in-out;
 }

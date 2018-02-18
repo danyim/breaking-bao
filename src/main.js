@@ -1,7 +1,6 @@
 import 'babel-polyfill'
-import 'whatwg-fetch'
 
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import FastClick from 'fastclick'
 import { Provider } from 'react-redux'
@@ -9,6 +8,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import router from './router'
 import history from './history'
+import './themes/_base.css'
 
 let routes = require('./routes.json').default // Loaded with utils/routes-loader.js
 
