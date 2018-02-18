@@ -1,4 +1,17 @@
-@import '../../global.css';
+.grid {
+  display: grid;
+  grid-template-rows: "auto";
+  grid-template-columns: "auto";
+  grid-template-areas: "left right";
+}
+
+.grid__left {
+  grid-area: left;
+}
+
+.grid__right {
+  grid-area: right;
+}
 
 @media screen and (max-width: 1024px) {
   .pageTitle {
@@ -7,5 +20,9 @@
 
   .content {
     padding: 0;
+  }
+
+  .grid {
+    grid-template-areas: "left" "right";
   }
 }

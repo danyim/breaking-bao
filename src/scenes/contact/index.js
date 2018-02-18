@@ -15,14 +15,14 @@ class ContactPage extends Component {
         <h3 className={s.pageTitle}>
           {title}
         </h3>
-        <div className="mdl-grid">
-          <div className="mdl-cell mdl-cell--8-col">
+        <div className={s.grid}>
+          <div className={s.grid__left}>
             <div
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
-          <div className="mdl-cell mdl-cell--4-col">
+          <div className={s.grid__right}>
             <p>
               Follow us @breakingbaotx on{' '}
               <a
