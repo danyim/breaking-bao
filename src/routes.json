@@ -1,40 +1,39 @@
 [
   {
     "path": "/",
-    "page": "./home",
+    "page": "./scenes/home",
     "chunk": "main"
   },
   {
     "path": "/error",
-    "page": "./error",
+    "page": "./scenes/error",
     "chunk": "main"
   },
   {
     "path": "/menu",
-    "page": "./menu"
+    "page": "./scenes/menu"
   },
   {
     "path": "/schedule",
-    "page": "./schedule"
+    "page": "./scenes/schedule"
   },
   {
     "path": "/press",
-    "page": "./press"
+    "page": "./scenes/press"
   },
   {
     "path": "/location",
-    "page": "./location"
+    "page": "./scenes/location"
   },
   {
     "path": "/contact",
-    "page": "./contact"
+    "page": "./scenes/contact"
   },
   {
     "path": "/tasks/:status(pending|completed)?",
-    "page": "./home",
+    "page": "./scenes/home",
     "data": {
-      "articles":
-        "GET https://gist.githubusercontent.com/koistya/a32919e847531320675764e7308b796a/raw/articles.json"
+      "articles": "GET https://gist.githubusercontent.com/koistya/a32919e847531320675764e7308b796a/raw/articles.json"
     }
   }
 ]
