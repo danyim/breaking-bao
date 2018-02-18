@@ -2,7 +2,19 @@
   background-color: transparent;
 }
 
-.logo {
+.links {
+  text-align: center;
+  margin: 1rem 0;
+
+  color: #ccc;
+  & > a {
+    color: #ccc;
+    margin: 0 .5rem;
+    text-decoration: none;
+  }
+}
+
+.madeByText {
   font-size: 0.9rem;
   color: #eee;
 
@@ -10,3 +22,4 @@
     color: #eee;
   }
 }
+

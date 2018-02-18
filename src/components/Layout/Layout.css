@@ -1,12 +1,12 @@
 .content {
-  margin: 0 auto;
+  /* margin: 0 auto;
   max-width: 1000px;
-  width: 100%;
+  width: 100%; */
 }
 
 .layout {
   display: grid;
-  grid-template-columns: auto 1200px auto;
+  grid-template-columns: auto 1100px auto;
   grid-template-rows: [header] 75px [main] auto [footer] 50px;
   grid-template-areas: "header header header" ". main ." "footer footer footer";
 }
