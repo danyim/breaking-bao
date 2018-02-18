@@ -9,48 +9,48 @@ class Navigation extends Component {
   render() {
     return (
       <nav
-        className="mdl-navigation"
+        className={s.nav}
         ref={node => {
           this.root = node
         }}
       >
-        <NavLink className={`mdl-navigation__link ${s.link}`} to="/">
+        <NavLink to="/">
           <Logo className={s.logo} width="75px" height="75px" />
         </NavLink>
         <NavLink
-          className={`mdl-navigation__link ${s.link} ${cx({
+          className={cx({
             [`${s.active}`]: history.location.pathname === '/menu'
-          })}`}
+          })}
           to="/menu"
         >
           Menu
         </NavLink>
         <NavLink
-          className={`mdl-navigation__link ${s.link} ${cx({
+          className={cx({
             [`${s.active}`]: history.location.pathname === '/schedule'
-          })}`}
+          })}
           to="/schedule"
         >
           Schedule
         </NavLink>
         <NavLink
-          className={`mdl-navigation__link ${s.link} ${cx({
+          className={cx({
             [`${s.active}`]: history.location.pathname === '/press'
-          })}`}
+          })}
           to="/press"
         >
           Press
         </NavLink>
         <NavLink
-          className={`mdl-navigation__link ${s.link} ${cx({
+          className={cx({
             [`${s.active}`]: history.location.pathname === '/contact'
-          })}`}
+          })}
           to="/contact"
         >
           Contact
         </NavLink>
         {
-          //<NavLink className={`mdl-navigation__link ${s.link}`} to="/contact">Contact</NavLink>
+          // <NavLink to="/contact">Contact</NavLink>
         }
       </nav>
     )

@@ -4,9 +4,9 @@
 
 .logo {
   font-size: 0.9rem;
-  color: #ddd;
+  color: #eee;
 
   & > a {
-    color: #ddd;
+    color: #eee;
   }
 }

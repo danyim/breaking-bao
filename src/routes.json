@@ -28,12 +28,5 @@
   {
     "path": "/contact",
     "page": "./scenes/contact"
-  },
-  {
-    "path": "/tasks/:status(pending|completed)?",
-    "page": "./scenes/home",
-    "data": {
-      "articles": "GET https://gist.githubusercontent.com/koistya/a32919e847531320675764e7308b796a/raw/articles.json"
-    }
   }
 ]

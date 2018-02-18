@@ -1,5 +1,6 @@
 :global(html, body) {
   font-family: 'Dosis', serif;
+  font-size: 16px;
 }
 
 :global(*) {
@@ -55,5 +56,5 @@
   background-color: #000;
   opacity: 0.75;
   content: '';
-  animation: 1.25s grow ease-in-out;
+  animation: 1.25s global(grow) ease-in-out;
 }

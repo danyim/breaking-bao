@@ -22,6 +22,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "styled-components": "^3.1.6",
     "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
@@ -82,8 +83,14 @@
     "webpack-hot-middleware": "^2.21.0"
   },
   "babel": {
-    "presets": ["env", "stage-1", "react"],
-    "plugins": ["transform-runtime"]
+    "presets": [
+      "env",
+      "stage-1",
+      "react"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
