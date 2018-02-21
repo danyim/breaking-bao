@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const AssetsPlugin = require('assets-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const pkg = require('../package.json')
 
 const isDebug =
@@ -15,6 +16,69 @@ const babelConfig = Object.assign({}, pkg.babel, {
     x => (x === 'env' ? ['env', { modules: false }] : x)
   )
 })
+
+const cssConfig = debug => {
+  if (debug === true) {
+    return [
+      {
+        loader: 'style-loader'
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: isDebug,
+          importLoaders: 1,
+          modules: true,
+          localIdentName: isDebug
+            ? '[local]' // '[name]__[local]--[hash:base64:5]'
+            : '[hash:base64:5]',
+          // getLocalIdent: (context, localIdentName, localName, options) =>
+          //   localName,
+          // CSS Nano http://cssnano.co/options/
+          // minimize: !isDebug
+          minimize: false // For debugging
+        }
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          config: { path: './tools/postcss.config.js' }
+        }
+      }
+    ]
+  }
+
+  return ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: [
+      {
+        loader: 'style-loader'
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: isDebug,
+          importLoaders: 1,
+          modules: true,
+          localIdentName: isDebug
+            ? '[local]' // '[name]__[local]--[hash:base64:5]'
+            : '[hash:base64:5]',
+          // getLocalIdent: (context, localIdentName, localName, options) =>
+          //   localName,
+          // CSS Nano http://cssnano.co/options/
+          // minimize: !isDebug
+          minimize: false // For debugging
+        }
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          config: { path: './tools/postcss.config.js' }
+        }
+      }
+    ]
+  })
+}
 
 // Webpack configuration (main.js => public/dist/main.{hash}.js)
 // http://webpack.github.io/docs/configuration.html
@@ -89,33 +153,7 @@ const config = {
       },
       {
         test: /\.css/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: isDebug,
-              importLoaders: true,
-              // CSS Modules https://github.com/css-modules/css-modules
-              modules: true,
-              localIdentName: isDebug
-                ? '[local]' // '[name]__[local]--[hash:base64:5]'
-                : '[hash:base64:4]',
-              // getLocalIdent: (context, localIdentName, localName, options) =>
-              //   localName,
-              // CSS Nano http://cssnano.co/options/
-              minimize: !isDebug
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: { path: './tools/postcss.config.js' }
-            }
-          }
-        ]
+        use: cssConfig(isDebug)
       },
       {
         test: /\.json$/,
@@ -140,16 +178,29 @@ const config = {
         loader: path.resolve(__dirname, './markdown-loader.js')
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         loader: 'url-loader',
         options: {
           limit: 10000
         }
       },
       {
-        test: /\.(eot|ttf|wav|mp3)$/,
+        test: /\.(eot|ttf|wav|mp3|ttf|otf|eot|woff2?)$/,
         loader: 'file-loader'
       }
+      // {
+      //   test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'public/fonts/', // where the fonts will go
+      //         publicPath: '../' // override the default path
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   }
 }
@@ -165,6 +216,7 @@ if (!isDebug) {
     })
   )
   config.plugins.push(new webpack.optimize.AggressiveMergingPlugin())
+  config.plugins.push(new ExtractTextPlugin('styles.css'))
 }
 
 // Hot Module Replacement (HMR) + React Hot Reload
