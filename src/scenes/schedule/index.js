@@ -114,6 +114,7 @@ class SchedulePage extends Component {
                       e.venue.city,
                       e.venue.zip
                     )(', ')}`}
+                    target="_blank noreferrer noopener"
                   >
                     <span
                       // eslint-disable-next-line react/no-danger

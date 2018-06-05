@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: auto 1100px auto;
+  grid-template-columns: auto 1024px auto;
   grid-template-rows: 75px auto 125px;
   grid-template-areas: 'header header header' '. main .' 'footer footer footer';
 

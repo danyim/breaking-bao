@@ -17,6 +17,7 @@ const PageTitle = styled.h3`
   font-size: 2.1rem;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
 
   &::after {
     display: block;
@@ -34,8 +35,8 @@ const PageTitle = styled.h3`
     padding: 0 0.5rem;
 
     &::after {
-      width: 100%;
-      animation: 1.25s ${growKeyframe(null, '100%')} ease-in-out;
+      width: 80%;
+      animation: 1.25s ${growKeyframe(null, '80%')} ease-in-out;
     }
   }
 `

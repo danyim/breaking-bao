@@ -6,10 +6,10 @@ import styled from 'styled-components'
 const StyledLink = styled(Link)`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-end;
+  justify-content: center;
 
-  line-height: 64px;
-  padding: 0 24px;
+  line-height: 5rem;
+  padding: 0 2rem;
   font-family: 'Dosis', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
@@ -32,14 +32,19 @@ const StyledLink = styled(Link)`
     }
   }
 
-  &:active {
+  &.active {
     font-weight: 800;
-    color: #c0c0c0;
+    color: rgba(0, 0, 0, 0.2);
 
     &:hover {
-      color: #c0c0c0;
+      color: rgba(0, 0, 0, 0.2);
       transform: none;
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    line-height: 3rem;
+    padding: 0 0.5rem;
   }
 `
 
@@ -49,8 +54,12 @@ class NavLink extends Component {
   }
 
   render() {
-    const { to } = this.props
-    return <StyledLink to={to}>{this.props.children}</StyledLink>
+    const { to, className } = this.props
+    return (
+      <StyledLink to={to} className={className}>
+        {this.props.children}
+      </StyledLink>
+    )
   }
 }
 
