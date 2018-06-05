@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { format, distanceInWordsStrict } from 'date-fns'
+import AddToCalendar from 'react-add-to-calendar'
+
 import Layout from '../../components/Layout/Layout'
 import { getEvents } from '../../api'
 
@@ -48,6 +50,30 @@ const Container = styled(Layout)`
   }
 `
 
+const CalendarButton = styled.div`
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  .react-add-to-calendar {
+    display: flex;
+    flex-flow: row nowrap;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    user-select: none;
+    a {
+      color: #000;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+`
+
 class SchedulePage extends Component {
   static delimit(...values) {
     return delimiter =>
@@ -59,6 +85,13 @@ class SchedulePage extends Component {
         }
         return acc
       }, ' ')
+  }
+
+  static utcIshDateToUTC(details) {
+    const d = `${details.year}-${details.month}-${details.day}T${
+      details.hour
+    }:${details.minutes}:${details.seconds}`
+    return d
   }
 
   state = {
@@ -129,6 +162,29 @@ class SchedulePage extends Component {
                   </a>
                 </div>
               )}
+
+              <CalendarButton>
+                <AddToCalendar
+                  buttonLabel="Add to calendar&nbsp;&nbsp;>"
+                  event={{
+                    title: `Breaking Bao @ ${e.title}`,
+                    description: e.website,
+                    location: `${e.venue.address}, ${e.venue.city}, ${
+                      e.venue.state
+                    } ${e.venue.zip}`,
+                    // startTime: e.start_date,
+                    // endTime: e.end_date
+                    startTime: SchedulePage.utcIshDateToUTC(
+                      e.utc_start_date_details
+                    ),
+                    endTime: SchedulePage.utcIshDateToUTC(
+                      e.utc_end_date_details
+                    )
+                  }}
+                  buttonTemplate={{ 'calendar-plus-o': 'left' }}
+                  listItems={[{ apple: 'iCal' }, { google: 'Google' }]}
+                />
+              </CalendarButton>
             </section>
           ))}
         </div>
