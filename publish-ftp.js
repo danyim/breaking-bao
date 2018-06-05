@@ -4,7 +4,7 @@ const ftp = new FtpDeploy()
 
 const defaultConfig = {
   localRoot: `${__dirname}/build`,
-  include: ['*', '**/*'],
+  include: ['*', '**/*', '.*'],
   remoteRoot: '/public_html',
   exclude: [],
   deleteRoot: true
