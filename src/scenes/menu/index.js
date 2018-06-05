@@ -1,199 +1,187 @@
-import React, { Component } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 import Layout from '../../components/Layout/Layout'
-import s from './styles.css'
-import { title, html } from './index.md'
 
-class MenuPage extends Component {
-  componentDidMount() {
-    document.title = title
+const Container = styled(Layout)`
+  .menu-item {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1rem 0;
+    justify-content: flex-start;
+
+    .menu-item-image {
+      order: 1;
+      width: 450px;
+    }
+    .menu-item-info {
+      order: 2;
+      margin: 0 3rem;
+    }
+
+    .menu-item-info h1 {
+      margin: 0.5rem 0 0.75rem;
+    }
+    .menu-item-info .ingredients {
+      margin-top: 0;
+      padding-left: 1.5rem;
+      & li {
+        font-family: 'Dosis', serif;
+        font-size: 16px;
+      }
+    }
   }
 
-  render() {
-    return (
-      <Layout className={s.content}>
-        <h3 className={s.pageTitle}>
-          {title}
-        </h3>
-        <div className="mdl-grid">
-          <div className="mdl-cell mdl-cell--12-col">
-            <div className="mdl-grid">
-              <div
-                className="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet"
-                style={{
-                  backgroundImage:
-                    'url("http://breakingbao.com/images/based.jpg")',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: '0px center',
-                  border: '1px solid black',
-                  minHeight: '350px'
-                }}
-              />
-              <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
-                <h1 className={s.abril}>BA$ED</h1>
-                <h5>Ingredients</h5>
-                <ul className={s.ingredients}>
-                  <li>Braised Pork Belly</li>
-                  <li>Pickled Mustard Greens</li>
-                  <li>Crushed Peanuts</li>
-                  <li>Brown Sugar</li>
-                  <li>Cilantro</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  .menu-item:nth-child(2n + 1) {
+    justify-content: flex-end;
 
-          <div className="mdl-cell mdl-cell--12-col-desktop mdl-cell--hide-phone mdl-cell--hide-tablet">
-            <div className="mdl-grid">
-              <div
-                className={`mdl-cell mdl-cell--5-col-desktop ${s.rightAlign}`}
-              >
-                <h1 className={s.shadows}>The Kolonel</h1>
-                <h5>Ingredients</h5>
-                <ul className={s.ingredients}>
-                  <li>Fried Chicken</li>
-                  <li>Spicy Kolonel Sauce</li>
-                  <li>Pickled Carrots &amp; Daikon</li>
-                  <li>Green Onion</li>
-                  <li>Sesame Seeds</li>
-                </ul>
-              </div>
-              <div
-                className="mdl-cell mdl-cell--7-col-desktop"
-                style={{
-                  backgroundImage:
-                    'url("http://breakingbao.com/images/kfc.jpg")',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: '0px center',
-                  border: '1px solid black',
-                  minHeight: '350px'
-                }}
-              />
-            </div>
-          </div>
+    .menu-item-image {
+      order: 2;
+    }
+    .menu-item-info {
+      order: 1;
+    }
+  }
 
-          <div className="mdl-cell mdl-cell--12-col">
-            <div className="mdl-grid">
-              <div
-                className="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet"
-                style={{
-                  backgroundImage:
-                    'url("http://breakingbao.com/images/tamchick.jpg")',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: '0px center',
-                  border: '1px solid black',
-                  minHeight: '350px'
-                }}
-              />
-              <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
-                <h1 className={s.shadows}>Thai-Dai</h1>
-                <h5>Ingredients</h5>
-                <ul className={s.ingredients}>
-                  <li>Shredded Chicken</li>
-                  <li>Thai Tamarind Sauce</li>
-                  <li>Pickled Daikon</li>
-                  <li>Green Onion</li>
-                  <li>Sesame Seeds</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  & .abril {
+    font-family: 'Abril Fatface', serif;
+  }
 
-          <div className="mdl-cell mdl-cell--12-col mdl-cell--hide-phone mdl-cell--hide-tablet">
-            <div className="mdl-grid">
-              <div
-                className={`mdl-cell mdl-cell--5-col-desktop ${s.rightAlign}`}
-              >
-                <h1 className={s.lobster}>Laab City</h1>
-                <h5>Ingredients</h5>
-                <ul className={s.ingredients}>
-                  <li>Thai Ground Beef</li>
-                  <li>Pickled Cucumbers</li>
-                  <li>Cilantro</li>
-                  <li>Sesame Seeds</li>
-                </ul>
-              </div>
-              <div
-                className="mdl-cell mdl-cell--7-col-desktop"
-                style={{
-                  backgroundImage:
-                    'url("http://breakingbao.com/images/laab.jpg")',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: '0px center',
-                  border: '1px solid black',
-                  minHeight: '350px'
-                }}
-              />
-            </div>
-          </div>
+  & .lobster {
+    font-family: 'Lobster', serif;
+  }
 
-          <div className="mdl-cell mdl-cell--12-col">
-            <div className="mdl-grid">
-              <div
-                className="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet"
-                style={{
-                  backgroundImage:
-                    'url("http://breakingbao.com/images/sloppy.jpg")',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: '0px center',
-                  border: '1px solid black',
-                  minHeight: '350px'
-                }}
-              />
-              <div className="mdl-cell mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
-                <h1 className={s.satisfy}>Sloppy Jack</h1>
-                <h5>Ingredients</h5>
-                <ul className={s.ingredients}>
-                  <li>Shredded Jack Fruit</li>
-                  <li>Spicy Kolonel Sauce</li>
-                  <li>Pickled Carrots and Daikon</li>
-                  <li>Green Onions</li>
-                  <li>Sesame Seeds</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  & .satisfy {
+    font-family: 'Satisfy', serif;
+  }
 
-          <div className="mdl-cell mdl-cell--12-col mdl-cell--hide-phone mdl-cell--hide-tablet">
-            <div className="mdl-grid">
-              <div
-                className={`mdl-cell mdl-cell--5-col-desktop ${s.rightAlign}`}
-              >
-                <h1 className={s.satisfy}>BB Fries</h1>
-                <h5>Ingredients</h5>
-                <ul className={s.ingredients}>
-                  <li>Red Pepper Flakes</li>
-                  <li>Semi-Sweet Glaze</li>
-                  <li>Cilantro</li>
-                  <li>Sesame Seeds</li>
-                </ul>
-              </div>
-              <div
-                className="mdl-cell mdl-cell--7-col-desktop"
-                style={{
-                  backgroundImage:
-                    'url("http://breakingbao.com/images/fry.jpg")',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: '0px center',
-                  border: '1px solid black',
-                  minHeight: '350px'
-                }}
-              />
-            </div>
-          </div>
+  & .shadows {
+    font-family: 'Shadows Into Light', serif;
+  }
+
+  @media screen and (max-width: 1024px) {
+    & .menu-item {
+      flex-flow: column nowrap;
+      .menu-item-image {
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+      }
+    }
+
+    & .menu-item:nth-child(2n + 1) {
+      justify-content: flex-end;
+
+      .menu-item-image {
+        order: 1;
+      }
+      .menu-item-info {
+        order: 2;
+      }
+    }
+  }
+`
+
+const ItemImage = styled.div`
+  background-image: url(${props => props.url});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px center;
+  border: 1px solid black;
+  min-height: 350px;
+`
+
+const MENU_ITEMS = [
+  {
+    id: 'based',
+    title: 'BA$ED',
+    imgUrl: 'http://breakingbao.com/images/based.jpg',
+    fontClassName: 'abril',
+    ingredients: [
+      'Braised Pork Belly',
+      'Pickled Mustard Greens',
+      'Crushed Peanuts',
+      'Brown Sugar',
+      'Cilantro'
+    ]
+  },
+  {
+    id: 'kolonel',
+    title: 'The Kolonel',
+    imgUrl: 'http://breakingbao.com/images/kfc.jpg',
+    fontClassName: 'shadows',
+    ingredients: [
+      'Fried Chicken',
+      'Spicy Kolonel Sauce',
+      'Pickled Carrots &amp; Daikon',
+      'Green Onion',
+      'Sesame Seeds'
+    ]
+  },
+  {
+    id: 'thaidai',
+    title: 'Thai-Dai',
+    imgUrl: 'http://breakingbao.com/images/tamchick.jpg',
+    fontClassName: 'shadows',
+    ingredients: [
+      'Shredded Chicken',
+      'Thai Tamarind Sauce',
+      'Pickled Daikon',
+      'Green Onion',
+      'Sesame Seeds'
+    ]
+  },
+  {
+    id: 'laabcity',
+    title: 'Laab City',
+    imgUrl: 'http://breakingbao.com/images/laab.jpg',
+    fontClassName: 'lobster',
+    ingredients: [
+      'Thai Ground Beef',
+      'Pickled Cucumbers',
+      'Cilantro',
+      'Sesame Seeds'
+    ]
+  },
+  {
+    id: 'sloppyjack',
+    title: 'Sloppy Jack',
+    imgUrl: 'http://breakingbao.com/images/sloppy.jpg',
+    fontClassName: 'satisfy',
+    ingredients: [
+      'Shredded Jack Fruit',
+      'Spicy Kolonel Sauce',
+      'Pickled Carrots and Daikon',
+      'Green Onions',
+      'Sesame Seeds'
+    ]
+  },
+  {
+    id: 'bbfries',
+    title: 'BB Fries',
+    imgUrl: 'http://breakingbao.com/images/fry.jpg',
+    fontClassName: 'satisfy',
+    ingredients: [
+      'Red Pepper Flakes',
+      'Semi-Sweet Glaze',
+      'Cilantro',
+      'Sesame Seeds'
+    ]
+  }
+]
+
+const MenuPage = () => (
+  <Container title="Menu">
+    {MENU_ITEMS.map(menuItem => (
+      <div className="menu-item" key={menuItem.id}>
+        <ItemImage className="menu-item-image" url={menuItem.imgUrl} />
+        <div className="menu-item-info">
+          <h1 className={menuItem.fontClassName}>{menuItem.title}</h1>
+          <ul className="ingredients">
+            {menuItem.ingredients.map(i => <li key={i}>{i}</li>)}
+          </ul>
         </div>
-        <div
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </Layout>
-    )
-  }
-}
+      </div>
+    ))}
+  </Container>
+)
 
 export default MenuPage

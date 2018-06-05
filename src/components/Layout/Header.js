@@ -1,16 +1,34 @@
 import React, { Component } from 'react'
-import Navigation from './Navigation'
-import s from './Header.css'
+import styled from 'styled-components'
 
+import Navigation from './Navigation'
+
+const Container = styled.header`
+& .row {
+  padding: 40px;
+}
+
+& .title {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  & .header {
+    display: flex;
+  }
+
+  & .row {
+    padding: 0 16px;
+  }
+}
+
+`
 class Header extends Component {
   render() {
     return (
-      <header
-        className={`mdl-layout__header mdl-layout__header--transparent ${s.header}`}
-        ref={node => (this.root = node)}
-      >
+      <Container>
         <Navigation />
-      </header>
+      </Container>
     )
   }
 }

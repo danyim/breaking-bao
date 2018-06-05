@@ -1,3 +1,4 @@
+/* global twttr */
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
@@ -48,7 +49,9 @@ export default class Twitter extends Component {
         data-widget-id={widgetId}
         data-chrome={chrome}
         data-tweet-limit={limit}
-      />
+      >
+        Twitter Feed
+      </a>
     )
   }
 }

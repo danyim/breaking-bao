@@ -1,9 +1,12 @@
 @import './_icons.css';
 
 html,
-body {
+body,
+#root {
   font-family: 'Dosis', serif;
   font-size: 16px;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -26,43 +29,3 @@ a {
   font-weight: 500;
 }
 
-@keyframes grow {
-  from {
-    width: 10%;
-    opacity: 1;
-  }
-
-  to {
-    width: 60%;
-    opacity: 0.75;
-  }
-}
-
-@keyframes bounce {
-  from {
-    top: 0;
-  }
-
-  to {
-    top: -30px;
-  }
-}
-
-h3 {
-  font-family: 'Dosis', sans-serif;
-  font-size: 2.1rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-h3::after {
-  display: block;
-  position: absolute;
-  margin-top: 5px;
-  width: 60%;
-  height: 5px;
-  background-color: #000;
-  opacity: 0.75;
-  content: '';
-  animation: 1.25s grow ease-in-out;
-}

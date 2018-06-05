@@ -1,11 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
-import s from './Logo.css'
+import styled from 'styled-components'
 
-const Logo = props =>
-  <svg
-    className={cx(s.logo, props.className)}
+const Container = styled.svg`
+  transition: all 0.2s;
+  width: ${props => props.width || '400px'};
+  height: ${props => props.height || '400px'};
+
+  & path {
+    fill: black;
+    fill-opacity: 1;
+    stroke: none;
+    fill-rule: nonzero;
+  }
+`
+const Logo = props => (
+  <Container
+    className={props.className}
     width={props.width}
     height={props.height}
     viewBox="0 0 595.28 841.89"
@@ -23,7 +34,8 @@ const Logo = props =>
       <path d="M 332.011719 423.125 L 332.011719 432.753906 C 332.011719 437.289062 339.03125 437.289062 339.03125 432.753906 L 339.03125 423.125 C 339.03125 418.597656 332.011719 418.597656 332.011719 423.125" />
       <path d="M 356.078125 427.316406 C 359.238281 430.574219 364.199219 425.601562 361.054688 422.355469 C 358.785156 420.019531 356.519531 417.679688 354.253906 415.335938 C 351.097656 412.078125 346.148438 417.050781 349.292969 420.296875 C 351.5625 422.636719 353.824219 424.976562 356.078125 427.316406" />
     </g>
-  </svg>
+  </Container>
+)
 
 Logo.propTypes = {
   className: PropTypes.string,

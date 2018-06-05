@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import history from '../../history'
+// import history from '../../history'
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -46,47 +47,47 @@ const Link = styled.a`
 class NavLink extends Component {
   static propTypes = {
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-    onClick: PropTypes.func
+    // onClick: PropTypes.func
   }
 
-  handleClick = event => {
-    if (this.props.onClick) {
-      this.props.onClick(event)
-    }
+  // handleClick = event => {
+  //   if (this.props.onClick) {
+  //     this.props.onClick(event)
+  //   }
 
-    if (event.button !== 0 /* left click */) {
-      return
-    }
+  //   if (event.button !== 0 /* left click */) {
+  //     return
+  //   }
 
-    if (event.metaKey || event.altKey || event.ctrlKey || event.shiftKey) {
-      return
-    }
+  //   if (event.metaKey || event.altKey || event.ctrlKey || event.shiftKey) {
+  //     return
+  //   }
 
-    if (event.defaultPrevented === true) {
-      return
-    }
+  //   if (event.defaultPrevented === true) {
+  //     return
+  //   }
 
-    event.preventDefault()
+  //   event.preventDefault()
 
-    if (this.props.to) {
-      history.push(this.props.to)
-    } else {
-      history.push({
-        pathname: event.currentTarget.pathname,
-        search: event.currentTarget.search
-      })
-    }
-  }
+  //   if (this.props.to) {
+  //     history.push(this.props.to)
+  //   } else {
+  //     history.push({
+  //       pathname: event.currentTarget.pathname,
+  //       search: event.currentTarget.search
+  //     })
+  //   }
+  // }
 
   render() {
     const { to, ...props } = this.props // eslint-disable-line no-use-before-define
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     return (
-      <Link
-        href={typeof to === 'string' ? to : history.createHref(to)}
-        {...props}
-        onClick={this.handleClick}
-      />
+      <StyledLink
+        to={to}
+      >
+      {props.children}
+      </StyledLink>
     )
   }
 }

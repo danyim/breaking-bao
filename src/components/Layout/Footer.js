@@ -1,25 +1,59 @@
 import React from 'react'
-import s from './Footer.css'
+import styled from 'styled-components'
 
-function Footer() {
-  return (
-    <footer className={s.transparent}>
-      <div className={s.links}>
-        @breakingbaotx
-        <a href="https://www.instagram.com/breakingbaotx" target="_blank noopener noreferrer">
-          ig <i className="icons icon-instagram" />
-        </a>
-        <a href="https://www.facebook.com/breakingbaotx" target="_blank noopener noreferrer">fb</a>
-        <a href="https://www.twitter.com/breakingbaotx" target="_blank noopener noreferrer">tw</a>
-      </div>
-      <div className={s.madeByText}>
-        made with &lt;3 in htx &copy; {new Date().getFullYear()} by{' '}
-        <a href="http://isomorph.co" rel="noopener noreferrer" target="_blank">
-          isomorph labs
-        </a>.
-      </div>
-    </footer>
-  )
-}
+const Container = styled.footer`
+  text-align: right;
+
+  & .social-links {
+    margin: 1rem 0;
+
+    color: #ccc;
+    & > a {
+      color: #ccc;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  }
+
+  & .madeBy {
+    font-size: 0.9rem;
+    color: #eee;
+
+    & > a {
+      color: #eee;
+    }
+  }
+`
+
+const Footer = () => (
+  <Container>
+    <div className="social-links">
+      <a
+        href="https://www.instagram.com/breakingbaotx"
+        target="_blank noopener noreferrer"
+      >
+        <i className="icons icon-instagram" />
+      </a>
+      <a
+        href="https://www.facebook.com/breakingbaotx"
+        target="_blank noopener noreferrer"
+      >
+        <i className="icons icon-facebook" />
+      </a>
+      <a
+        href="https://www.twitter.com/breakingbaotx"
+        target="_blank noopener noreferrer"
+      >
+        <i className="icons icon-twitter" />
+      </a>
+    </div>
+    <div className="madeBy">
+      made with &lt;3 in htx &copy; {new Date().getFullYear()} by{' '}
+      <a href="http://isomorph.co" rel="noopener noreferrer" target="_blank">
+        isomorph labs
+      </a>.
+    </div>
+  </Container>
+)
 
 export default Footer

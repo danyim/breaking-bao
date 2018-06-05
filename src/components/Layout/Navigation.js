@@ -1,60 +1,46 @@
-import React, { Component } from 'react'
-import cx from 'classnames'
+import React from 'react'
+import { withRouter } from 'react-router'
+import styled from 'styled-components'
 import NavLink from './NavLink'
 import Logo from '../Logo'
-import history from '../../history'
-import s from './Navigation.css'
 
-class Navigation extends Component {
-  render() {
-    return (
-      <nav
-        className={s.nav}
-        ref={node => {
-          this.root = node
-        }}
+const Container = styled.nav`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+`
+
+const Navigation = props => {
+  const { location: { pathname = '' } = {} } = props
+
+  return (
+    <Container>
+      <NavLink to="/">
+        <Logo width="75px" height="75px" />
+      </NavLink>
+      <NavLink className={pathname === '/menu' ? 'active' : ''} to="/menu">
+        Menu
+      </NavLink>
+      <NavLink
+        className={pathname === '/schedule' ? 'active' : ''}
+        to="/schedule"
       >
-        <NavLink to="/">
-          <Logo className={s.logo} width="75px" height="75px" />
-        </NavLink>
-        <NavLink
-          className={cx({
-            [`${s.active}`]: history.location.pathname === '/menu'
-          })}
-          to="/menu"
-        >
-          Menu
-        </NavLink>
-        <NavLink
-          className={cx({
-            [`${s.active}`]: history.location.pathname === '/schedule'
-          })}
-          to="/schedule"
-        >
-          Schedule
-        </NavLink>
-        <NavLink
-          className={cx({
-            [`${s.active}`]: history.location.pathname === '/press'
-          })}
-          to="/press"
-        >
-          Press
-        </NavLink>
-        <NavLink
-          className={cx({
-            [`${s.active}`]: history.location.pathname === '/contact'
-          })}
-          to="/contact"
-        >
-          Contact
-        </NavLink>
-        {
-          // <NavLink to="/contact">Contact</NavLink>
-        }
-      </nav>
-    )
-  }
+        Schedule
+      </NavLink>
+      <NavLink className={pathname === '/press' ? 'active' : ''} to="/press">
+        Press
+      </NavLink>
+      <NavLink
+        className={pathname === '/contact' ? 'active' : ''}
+        to="/contact"
+      >
+        Contact
+      </NavLink>
+      {
+        // <NavLink to="/contact">Contact</NavLink>
+      }
+    </Container>
+  )
 }
 
-export default Navigation
+export default withRouter(Navigation)

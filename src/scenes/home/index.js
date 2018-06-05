@@ -1,39 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
+import styled from 'styled-components'
+
 import Layout from '../../components/Layout/Layout'
-import Splash from '../../components/Splash/Splash'
-import s from './styles.css'
-import { title, html } from './index.md'
+import Splash from '../../components/Splash'
 
-class HomePage extends Component {
-  static propTypes = {}
-
-  componentDidMount() {
-    document.title = title
+const CenteredContainer = styled.div`
+  height: 100%;
+  display: grid;
+  & > * {
+    margin: auto;
+    width: 100%;
   }
-
-  render() {
-    return (
-      <Layout className={s.content}>
-        <p>
-          <br />
-          <br />
-        </p>
-        <div className={`mdl-grid ${s.centered}`}>
-          <div className="mdl-cell mdl-cell--10-col">
-            <Splash width={900} height={375} className="center" />
-            <div
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
-        </div>
-        <p>
-          <br />
-          <br />
-        </p>
-      </Layout>
-    )
-  }
-}
+`
+const HomePage = () => (
+  <Layout>
+    <CenteredContainer>
+      <Splash width={900} height={375} />
+    </CenteredContainer>
+  </Layout>
+)
 
 export default HomePage

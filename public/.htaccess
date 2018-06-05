@@ -1,4 +1,0 @@
-ErrorDocument 400 /index.html
-ErrorDocument 403 /index.html
-ErrorDocument 404 /index.html
-ErrorDocument 500 /index.html
