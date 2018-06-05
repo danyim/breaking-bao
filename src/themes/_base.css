@@ -1,15 +1,11 @@
 @import './_icons.css';
+
 html,
 body {
   font-family: 'Dosis', serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: #ff4081;
-  font-weight: 500;
 }
 
 * {
@@ -59,7 +55,7 @@ h3 {
   text-transform: uppercase;
 }
 
-h3:after {
+h3::after {
   display: block;
   position: absolute;
   margin-top: 5px;
