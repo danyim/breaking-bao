@@ -24,7 +24,8 @@ class SchedulePage extends Component {
 
   componentDidMount() {
     document.title = title
-    getEvents().then(e => {
+    const options = { perPage: 20 }
+    getEvents(options).then(e => {
       this.setState({
         events: e.data.events
       })
