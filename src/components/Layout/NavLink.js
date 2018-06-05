@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-// import history from '../../history'
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -46,49 +45,12 @@ const StyledLink = styled(Link)`
 
 class NavLink extends Component {
   static propTypes = {
-    to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-    // onClick: PropTypes.func
+    to: PropTypes.string.isRequired
   }
 
-  // handleClick = event => {
-  //   if (this.props.onClick) {
-  //     this.props.onClick(event)
-  //   }
-
-  //   if (event.button !== 0 /* left click */) {
-  //     return
-  //   }
-
-  //   if (event.metaKey || event.altKey || event.ctrlKey || event.shiftKey) {
-  //     return
-  //   }
-
-  //   if (event.defaultPrevented === true) {
-  //     return
-  //   }
-
-  //   event.preventDefault()
-
-  //   if (this.props.to) {
-  //     history.push(this.props.to)
-  //   } else {
-  //     history.push({
-  //       pathname: event.currentTarget.pathname,
-  //       search: event.currentTarget.search
-  //     })
-  //   }
-  // }
-
   render() {
-    const { to, ...props } = this.props // eslint-disable-line no-use-before-define
-    // eslint-disable-next-line jsx-a11y/anchor-has-content
-    return (
-      <StyledLink
-        to={to}
-      >
-      {props.children}
-      </StyledLink>
-    )
+    const { to } = this.props
+    return <StyledLink to={to}>{this.props.children}</StyledLink>
   }
 }
 

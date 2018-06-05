@@ -15,7 +15,9 @@ const CenteredContainer = styled.div`
 const HomePage = () => (
   <Layout>
     <CenteredContainer>
-      <Splash width={900} height={375} />
+      <div>
+        <Splash />
+      </div>
     </CenteredContainer>
   </Layout>
 )
