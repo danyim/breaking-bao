@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://breakingbao.com/images/logo.png" alt="Breaking Bao Logo" align="center" height="200" />
+  <img src="https://github.com/danyim/breaking-bao/raw/master/src/assets/images/logo.png" alt="Breaking Bao Logo" align="center" height="200" />
 </p>
 
 # Breaking Bao Website

@@ -1,5 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import based from '../../assets/images/based.jpg'
+import fry from '../../assets/images/fry.jpg'
+import kfc from '../../assets/images/kfc.jpg'
+import laab from '../../assets/images/laab.jpg'
+import logo from '../../assets/images/logo.png'
+import sloppy from '../../assets/images/sloppy.jpg'
+import tamchick from '../../assets/images/tamchick.jpg'
+
 import Layout from '../../components/Layout/Layout'
 
 const Container = styled(Layout)`
@@ -89,11 +97,21 @@ const ItemImage = styled.div`
   min-height: 350px;
 `
 
+const IMAGES = {
+  based,
+  fry,
+  kfc,
+  laab,
+  logo,
+  sloppy,
+  tamchick
+}
+
 const MENU_ITEMS = [
   {
     id: 'based',
     title: 'BA$ED',
-    imgUrl: 'http://breakingbao.com/images/based.jpg',
+    imgUrl: IMAGES.based,
     fontClassName: 'abril',
     ingredients: [
       'Braised Pork Belly',
@@ -106,7 +124,7 @@ const MENU_ITEMS = [
   {
     id: 'kolonel',
     title: 'The Kolonel',
-    imgUrl: 'http://breakingbao.com/images/kfc.jpg',
+    imgUrl: IMAGES.kfc,
     fontClassName: 'shadows',
     ingredients: [
       'Fried Chicken',
@@ -119,7 +137,7 @@ const MENU_ITEMS = [
   {
     id: 'thaidai',
     title: 'Thai-Dai',
-    imgUrl: 'http://breakingbao.com/images/tamchick.jpg',
+    imgUrl: IMAGES.tamchick,
     fontClassName: 'shadows',
     ingredients: [
       'Shredded Chicken',
@@ -132,7 +150,7 @@ const MENU_ITEMS = [
   {
     id: 'laabcity',
     title: 'Laab City',
-    imgUrl: 'http://breakingbao.com/images/laab.jpg',
+    imgUrl: IMAGES.laab,
     fontClassName: 'lobster',
     ingredients: [
       'Thai Ground Beef',
@@ -144,7 +162,7 @@ const MENU_ITEMS = [
   {
     id: 'sloppyjack',
     title: 'Sloppy Jack',
-    imgUrl: 'http://breakingbao.com/images/sloppy.jpg',
+    imgUrl: IMAGES.sloppy,
     fontClassName: 'satisfy',
     ingredients: [
       'Shredded Jack Fruit',
@@ -157,7 +175,7 @@ const MENU_ITEMS = [
   {
     id: 'bbfries',
     title: 'BB Fries',
-    imgUrl: 'http://breakingbao.com/images/fry.jpg',
+    imgUrl: IMAGES.fry,
     fontClassName: 'satisfy',
     ingredients: [
       'Red Pepper Flakes',
