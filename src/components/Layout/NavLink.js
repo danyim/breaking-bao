@@ -11,7 +11,6 @@ const StyledLink = styled(Link)`
   line-height: 5rem;
   padding: 0 2rem;
   font-family: 'Dosis', sans-serif;
-  font-weight: 600;
   font-size: 0.9rem;
   color: black;
   text-transform: uppercase;
