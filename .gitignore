@@ -1,19 +1,5 @@
-# Include your project-specific ignores in this file
-
-# Compiled output
-public/dist
-public/index.html
-public/sitemap.xml
-
-# Node.js and NPM
 node_modules
 npm-debug.log
-
-# Firebase
-firebase-debug.log
-
-# Config
-tools/config.js
-
+build
 *.sublime-project
 *.sublime-workspace
