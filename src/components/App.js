@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router'
 
-import Home from './scenes/home'
-import Contact from './scenes/contact'
-import Location from './scenes/location'
-import Schedule from './scenes/schedule'
-import Press from './scenes/press'
-import Menu from './scenes/menu'
-import ErrorComponent from './scenes/error'
+import Home from './../scenes/home'
+import Contact from './../scenes/contact'
+import Location from './../scenes/location'
+import Schedule from './../scenes/schedule'
+import Press from './../scenes/press'
+import Menu from './../scenes/menu'
+import ErrorComponent from './../scenes/error'
 
 class App extends Component {
   render() {

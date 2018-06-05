@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Logo from '../../components/Logo'
 import GoogleMap from '../../components/GoogleMap'
 import GoogleMapMarker from '../../components/GoogleMapMarker'
