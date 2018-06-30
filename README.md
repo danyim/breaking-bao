@@ -4,7 +4,7 @@
 
 # Breaking Bao Website
 
-Basic static site with Google Maps, a Twitter Feed, and Material Design lite. Scaffolded with [**React Static Boilerplate**](https://github.com/kriasoft/react-static-boilerplate).
+Basic static site with Google Maps and a Twitter Feed, using a psuedo-backend through Wordpress's API for the event schedule.
 
 ### Installation
 
