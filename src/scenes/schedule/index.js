@@ -88,9 +88,9 @@ class SchedulePage extends Component {
   }
 
   static utcIshDateToUTC(details) {
-    const d = `${details.year}-${details.month}-${details.day}T${
-      details.hour
-    }:${details.minutes}:${details.seconds}`
+    const d = `${details.year}-${details.month}-${details.day}T${details.hour}:${details.minutes}:${
+      details.seconds
+    }`
     return d
   }
 
@@ -126,8 +126,7 @@ class SchedulePage extends Component {
                 </mark>
               </header>
               <div name="time">
-                {format(e.start_date, 'h:mm a')} -{' '}
-                {format(e.end_date, 'h:mm a')} ({distanceInWordsStrict(
+                {format(e.start_date, 'h:mm a')} - {format(e.end_date, 'h:mm a')} ({distanceInWordsStrict(
                   e.start_date,
                   e.end_date
                 )})
@@ -169,17 +168,13 @@ class SchedulePage extends Component {
                   event={{
                     title: `Breaking Bao @ ${e.title}`,
                     description: e.website,
-                    location: `${e.venue.address}, ${e.venue.city}, ${
-                      e.venue.state
-                    } ${e.venue.zip}`,
+                    location: `${e.venue.address}, ${e.venue.city}, ${e.venue.state} ${
+                      e.venue.zip
+                    }`,
                     // startTime: e.start_date,
                     // endTime: e.end_date
-                    startTime: SchedulePage.utcIshDateToUTC(
-                      e.utc_start_date_details
-                    ),
-                    endTime: SchedulePage.utcIshDateToUTC(
-                      e.utc_end_date_details
-                    )
+                    startTime: SchedulePage.utcIshDateToUTC(e.utc_start_date_details),
+                    endTime: SchedulePage.utcIshDateToUTC(e.utc_end_date_details)
                   }}
                   buttonTemplate={{ 'calendar-plus-o': 'left' }}
                   listItems={[{ apple: 'iCal' }, { google: 'Google' }]}

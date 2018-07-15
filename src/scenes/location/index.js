@@ -9,18 +9,11 @@ const LocationPage = () => (
   <Layout title="Location / Contact">
     <div className="mdl-grid">
       <div className="mdl-cell mdl-cell--8-col">
-        <p>
-          We are a locally-owned business currently operating out of the
-          **Houston area only**.
-        </p>
+        <p>We are a locally-owned business currently operating out of the **Houston area only**.</p>
 
         <p>
           For all inquiries, please send an email to{' '}
-          <a
-            href="mailto:holler@breakingbao.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:holler@breakingbao.com" target="_blank" rel="noopener noreferrer">
             holler@breakingbao.com
           </a>.
         </p>
@@ -44,11 +37,7 @@ const LocationPage = () => (
       <div className="mdl-cell mdl-cell--4-col">
         <p>
           Follow us on Twitter{' '}
-          <a
-            href="https://twitter.com/breakingbaotx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://twitter.com/breakingbaotx" target="_blank" rel="noopener noreferrer">
             @breakingbaotx
           </a>!
         </p>

@@ -38,9 +38,7 @@ class ErrorPage extends Component {
 
   componentDidMount() {
     document.title =
-      this.props.error && this.props.error.status === 404
-        ? 'Page Not Found'
-        : 'Error'
+      this.props.error && this.props.error.status === 404 ? 'Page Not Found' : 'Error'
   }
 
   render() {

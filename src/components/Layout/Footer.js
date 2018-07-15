@@ -28,22 +28,13 @@ const Container = styled.footer`
 const Footer = () => (
   <Container>
     <div className="social-links">
-      <a
-        href="https://www.instagram.com/breakingbaotx"
-        target="_blank noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/breakingbaotx" target="_blank noopener noreferrer">
         <i className="icons icon-instagram" />
       </a>
-      <a
-        href="https://www.facebook.com/breakingbaotx"
-        target="_blank noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/breakingbaotx" target="_blank noopener noreferrer">
         <i className="icons icon-facebook" />
       </a>
-      <a
-        href="https://www.twitter.com/breakingbaotx"
-        target="_blank noopener noreferrer"
-      >
+      <a href="https://www.twitter.com/breakingbaotx" target="_blank noopener noreferrer">
         <i className="icons icon-twitter" />
       </a>
     </div>

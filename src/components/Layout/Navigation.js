@@ -21,19 +21,13 @@ const Navigation = props => {
       <NavLink className={pathname === '/menu' ? 'active' : ''} to="/menu">
         Menu
       </NavLink>
-      <NavLink
-        className={pathname === '/schedule' ? 'active' : ''}
-        to="/schedule"
-      >
+      <NavLink className={pathname === '/schedule' ? 'active' : ''} to="/schedule">
         Schedule
       </NavLink>
       <NavLink className={pathname === '/press' ? 'active' : ''} to="/press">
         Press
       </NavLink>
-      <NavLink
-        className={pathname === '/contact' ? 'active' : ''}
-        to="/contact"
-      >
+      <NavLink className={pathname === '/contact' ? 'active' : ''} to="/contact">
         Contact
       </NavLink>
       {

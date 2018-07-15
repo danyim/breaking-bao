@@ -26,38 +26,22 @@ const ContactPage = () => (
   <Container title="Contact">
     <div className="grid">
       <div className="grid__left">
-        <p>
-          We are a locally-owned business currently operating out of the Houston
-          area.
-        </p>
+        <p>We are a locally-owned business currently operating out of the Houston area.</p>
         <p>
           For general questions and inquiries, shoot an email to{' '}
-          <a
-            href="mailto:holler@breakingbao.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:holler@breakingbao.com" target="_blank" rel="noopener noreferrer">
             holler@breakingbao.com
           </a>.
         </p>
         <p>
           For catering, email{' '}
-          <a
-            href="mailto:catering@breakingbao.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:catering@breakingbao.com" target="_blank" rel="noopener noreferrer">
             catering@breakingbao.com
           </a>.
         </p>
         <p>
-          If you're interested in joining the Breaking Bao team, reach out to us
-          at{' '}
-          <a
-            href="mailto:hiring@breakingbao.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          If you're interested in joining the Breaking Bao team, reach out to us at{' '}
+          <a href="mailto:hiring@breakingbao.com" target="_blank" rel="noopener noreferrer">
             hiring@breakingbao.com
           </a>.
         </p>
@@ -65,25 +49,13 @@ const ContactPage = () => (
       <div className="grid__right">
         <p>
           Follow us @breakingbaotx on{' '}
-          <a
-            href="https://twitter.com/breakingbaotx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://twitter.com/breakingbaotx" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>,{' '}
-          <a
-            href="https://instagram.com/breakingbaotx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://instagram.com/breakingbaotx" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>,{' '}
-          <a
-            href="https://facebook.com/breakingbaotx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://facebook.com/breakingbaotx" target="_blank" rel="noopener noreferrer">
             Facebook
           </a>, and Snapchat!
         </p>

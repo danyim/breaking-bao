@@ -34,8 +34,7 @@ const SplashSvg = styled.svg`
     fill-opacity: 0.6;
     stroke: none;
     fill-rule: nonzero;
-    transition: transform 0.4s ease-in-out, fill-opacity 0.4s ease-in-out,
-      fill 1.2s ease-in-out;
+    transition: transform 0.4s ease-in-out, fill-opacity 0.4s ease-in-out, fill 1.2s ease-in-out;
   }
 
   & .breakingBao path {
@@ -43,15 +42,13 @@ const SplashSvg = styled.svg`
   }
 
   & .fusion path {
-    transition: transform 0.4s ease-in, fill-opacity 0.4s ease-in-out,
-      fill 1s ease-in-out;
+    transition: transform 0.4s ease-in, fill-opacity 0.4s ease-in-out, fill 1s ease-in-out;
   }
 
   & .bun path {
     position: relative;
     fill: #e2460d;
-    transition: transform 0.4s ease-in, fill-opacity 0.4s ease-in-out,
-      fill 0.3s ease-in;
+    transition: transform 0.4s ease-in, fill-opacity 0.4s ease-in-out, fill 0.3s ease-in;
   }
 `
 

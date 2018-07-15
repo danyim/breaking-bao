@@ -152,12 +152,7 @@ const MENU_ITEMS = [
     title: 'Laab City',
     imgUrl: IMAGES.laab,
     fontClassName: 'lobster',
-    ingredients: [
-      'Thai Ground Beef',
-      'Pickled Cucumbers',
-      'Cilantro',
-      'Sesame Seeds'
-    ]
+    ingredients: ['Thai Ground Beef', 'Pickled Cucumbers', 'Cilantro', 'Sesame Seeds']
   },
   {
     id: 'sloppyjack',
@@ -177,12 +172,7 @@ const MENU_ITEMS = [
     title: 'BB Fries',
     imgUrl: IMAGES.fry,
     fontClassName: 'satisfy',
-    ingredients: [
-      'Red Pepper Flakes',
-      'Semi-Sweet Glaze',
-      'Cilantro',
-      'Sesame Seeds'
-    ]
+    ingredients: ['Red Pepper Flakes', 'Semi-Sweet Glaze', 'Cilantro', 'Sesame Seeds']
   }
 ]
 
@@ -193,9 +183,7 @@ const MenuPage = () => (
         <ItemImage className="menu-item-image" url={menuItem.imgUrl} />
         <div className="menu-item-info">
           <h1 className={menuItem.fontClassName}>{menuItem.title}</h1>
-          <ul className="ingredients">
-            {menuItem.ingredients.map(i => <li key={i}>{i}</li>)}
-          </ul>
+          <ul className="ingredients">{menuItem.ingredients.map(i => <li key={i}>{i}</li>)}</ul>
         </div>
       </div>
     ))}
