@@ -14,7 +14,7 @@ const Container = styled(Layout)`
 
     & > header {
       margin-bottom: 0;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       line-height: 1.6rem;
       display: flex;
       flex-flow: row wrap;
