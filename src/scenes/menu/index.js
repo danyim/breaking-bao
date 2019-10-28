@@ -125,7 +125,7 @@ const MENU_ITEMS = [
     id: 'kolonel',
     title: 'The Kolonel',
     imgUrl: IMAGES.kfc,
-    fontClassName: 'shadows',
+    fontClassName: 'abril',
     ingredients: [
       'Fried Chicken',
       'Spicy Kolonel Sauce',
@@ -158,7 +158,7 @@ const MENU_ITEMS = [
     id: 'sloppyjack',
     title: 'Sloppy Jack',
     imgUrl: IMAGES.sloppy,
-    fontClassName: 'satisfy',
+    fontClassName: 'shadows',
     ingredients: [
       'Shredded Jack Fruit',
       'Spicy Kolonel Sauce',

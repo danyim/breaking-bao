@@ -1,24 +1,42 @@
 import React from 'react'
+import styled from 'styled-components'
 import Layout from '../../components/Layout/Layout'
 import Flex from '../../components/Flex'
 
+const FlexLocation = styled(Flex)`
+  & > div:first-child {
+    flex-basis: 350px;
+    padding-left: 0;
+  }
+
+  & > div {
+    flex: 1 1 auto;
+    padding-left: 30px;
+  }
+`
+
 const LocationPage = () => (
   <Layout title="Location">
-    <Flex justifyCenter><div>
-      <strong>
-        <a href="https://www.politanrow.com/locations" target="_blank" rel="noopener noreferrer">
+    <FlexLocation justifyCenter>
+      <Flex column justifyCenter>
+        <a href="https://houston.politanrow.com/vendors" target="_blank" rel="noopener noreferrer">
           <img
-            src="http://api.breakingbao.com/wp-content/uploads/2019/10/Politan-Solid-Compressed-web.png"
+            src="http://api.breakingbao.com/wp-content/uploads/2019/10/politan.jpg"
             alt="Politan Houston"
-            width="200"
+            width="250"
           />
-          <br />
-          Politan Row Food Hall
         </a>
-      </strong>
-      <br />
-      2445 Times Blvd, Houston, TX 77005
-      </div>
+      </Flex>
+      <Flex column justifyCenter>
+        <h1>POLITAN HOUSTON</h1>
+        <p>
+          <a href="https://goo.gl/maps/eWgmNWSyR2nqoWaw6" target="_blank" rel="noopener noreferrer">
+            2445 Times Blvd
+            <br />
+            Houston, TX 77005
+          </a>
+        </p>
+      </Flex>
       {/*
       <div className="mdl-cell mdl-cell--8-col">
 
@@ -41,7 +59,7 @@ const LocationPage = () => (
         <Twitter user="breakingbaotx" limit={3} chrome="noheader, nofooter" />
       </div>
       */}
-    </Flex>
+    </FlexLocation>
   </Layout>
 )
 
