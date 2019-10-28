@@ -21,8 +21,8 @@ const Navigation = props => {
       <NavLink className={pathname === '/menu' ? 'active' : ''} to="/menu">
         Menu
       </NavLink>
-      <NavLink className={pathname === '/schedule' ? 'active' : ''} to="/schedule">
-        Schedule
+      <NavLink className={pathname === '/location' ? 'active' : ''} to="/location">
+        Location
       </NavLink>
       <NavLink className={pathname === '/press' ? 'active' : ''} to="/press">
         Press

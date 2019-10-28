@@ -1,36 +1,33 @@
 import React from 'react'
-import Logo from '../../components/Logo'
-import GoogleMap from '../../components/GoogleMap'
-import GoogleMapMarker from '../../components/GoogleMapMarker'
-import Twitter from '../../components/Twitter'
 import Layout from '../../components/Layout/Layout'
+import Flex from '../../components/Flex'
 
 const LocationPage = () => (
-  <Layout title="Location / Contact">
-    <div className="mdl-grid">
+  <Layout title="Location">
+    <Flex justifyCenter><div>
+      <strong>
+        <a href="https://www.politanrow.com/locations" target="_blank" rel="noopener noreferrer">
+          <img
+            src="http://api.breakingbao.com/wp-content/uploads/2019/10/Politan-Solid-Compressed-web.png"
+            alt="Politan Houston"
+            width="200"
+          />
+          <br />
+          Politan Row Food Hall
+        </a>
+      </strong>
+      <br />
+      2445 Times Blvd, Houston, TX 77005
+      </div>
+      {/*
       <div className="mdl-cell mdl-cell--8-col">
-        <p>We are a locally-owned business currently operating out of the **Houston area only**.</p>
 
-        <p>
-          For all inquiries, please send an email to{' '}
-          <a href="mailto:holler@breakingbao.com" target="_blank" rel="noopener noreferrer">
-            holler@breakingbao.com
-          </a>.
-        </p>
-
-        <GoogleMap center={{ lat: 29.761993, lng: -95.366302 }} zoom={17}>
-          <GoogleMapMarker lat={29.761993} lng={-95.366302}>
+        <GoogleMap center={{ lat: 29.7166325, lng: -95.4174284 }} zoom={17}>
+          <GoogleMapMarker lat={29.7166325} lng={-95.4174284}>
             <Logo width="60px" height="60px" />
-            <strong>Bao Bus One</strong>
+            <strong>Politan Row Food Hall</strong>
             <br />
-            123 Main, Houston, TX 77002
-          </GoogleMapMarker>
-
-          <GoogleMapMarker lat={29.76293} lng={-95.369}>
-            <Logo width="60px" height="60px" />
-            <strong>Breaking Bao Pop-up Event</strong>
-            <br />
-            175 Elgin, Houston, TX 77002
+            2445 Times Blvd, Houston, TX 77005
           </GoogleMapMarker>
         </GoogleMap>
       </div>
@@ -43,7 +40,8 @@ const LocationPage = () => (
         </p>
         <Twitter user="breakingbaotx" limit={3} chrome="noheader, nofooter" />
       </div>
-    </div>
+      */}
+    </Flex>
   </Layout>
 )
 

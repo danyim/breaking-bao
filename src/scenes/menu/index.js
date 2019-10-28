@@ -183,7 +183,11 @@ const MenuPage = () => (
         <ItemImage className="menu-item-image" url={menuItem.imgUrl} />
         <div className="menu-item-info">
           <h1 className={menuItem.fontClassName}>{menuItem.title}</h1>
-          <ul className="ingredients">{menuItem.ingredients.map(i => <li key={i}>{i}</li>)}</ul>
+          <ul className="ingredients">
+            {menuItem.ingredients.map(i => (
+              <li key={i}>{i}</li>
+            ))}
+          </ul>
         </div>
       </div>
     ))}

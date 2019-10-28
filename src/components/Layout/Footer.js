@@ -42,7 +42,8 @@ const Footer = () => (
       made with &lt;3 in htx &copy; {new Date().getFullYear()} by{' '}
       <a href="http://isomorph.co" rel="noopener noreferrer" target="_blank">
         isomorph labs
-      </a>.
+      </a>
+      .
     </div>
   </Container>
 )

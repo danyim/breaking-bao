@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../../components/Layout/Layout'
+import Flex from '../../components/Flex'
 
 const Container = styled(Layout)`
   & .video {
@@ -15,13 +16,7 @@ const Container = styled(Layout)`
   }
 `
 
-const Flex = styled.div`
-  display: flex;
-  width: 100%;
-
-  ${({ justifyCenter }) => (justifyCenter ? 'justify-content: center;' : '')}
-  ${({ margin }) => (margin ? `margin: ${margin};` : '')}
-
+const FlexPress = styled(Flex)`
   & > div:first-child {
     flex-basis: 350px;
   }
@@ -33,14 +28,16 @@ const Flex = styled.div`
 
 const PressPage = () => (
   <Container title="Press">
-    <Flex>
+    <FlexPress>
       <div>
         <a
           href="http://houston.culturemap.com/news/restaurants-bars/08-21-19-politan-row-rice-village-food-hall-vendor-announcement-breaking-bao-cochinita-co-susu-kopi-boba/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="http://api.breakingbao.com/wp-content/uploads/2019/10/cmap.svg_-e1572293172766.png"
+            alt="Culture Map Houston"
             width="275"
           />
         </a>
@@ -48,16 +45,18 @@ const PressPage = () => (
       <div>
         <h2>Tacos, bao, and Indonesian ice cream are on deck for Rice Village's new food hall</h2>
       </div>
-    </Flex>
+    </FlexPress>
 
-    <Flex>
+    <FlexPress>
       <div>
         <a
           href="https://houston.eater.com/2019/8/21/20826710/politan-row-breaking-bao-cochinita-and-co-bar-politan-susu-kopi-and-boba-opening"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="http://api.breakingbao.com/wp-content/uploads/2019/10/eater.svg_-e1572293270643.png"
+            alt="Eater Houston"
             width="200"
           />
         </a>
@@ -67,9 +66,9 @@ const PressPage = () => (
           Here’s More Details On What’s Opening Inside Rice Village’s Much-Anticipated Food Hall
         </h2>
       </div>
-    </Flex>
+    </FlexPress>
 
-    <Flex justifyCenter margin="25px 0 0">
+    <FlexPress justifyCenter margin="25px 0 0">
       <iframe
         className="video"
         src="https://www.youtube.com/embed/y8N1hNdPW-Q"
@@ -78,7 +77,7 @@ const PressPage = () => (
         allowFullScreen
         title="Great Day Houston"
       />
-    </Flex>
+    </FlexPress>
   </Container>
 )
 
