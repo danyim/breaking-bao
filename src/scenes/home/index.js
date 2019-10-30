@@ -8,7 +8,7 @@ const CenteredContainer = styled.div`
   height: 100%;
   display: grid;
   & > * {
-    margin: auto;
+    margin: 20px auto 0;
     width: 100%;
   }
 `
