@@ -28,12 +28,19 @@ const LocationPage = () => (
         </a>
       </Flex>
       <Flex column justifyCenter>
-        <h1>POLITAN HOUSTON</h1>
+        <h1>POLITAN ROW HOUSTON</h1>
         <p>
+          SUN-THURS 11:00 AM TO 10:00 PM
+          <br />
+          FRI & SAT 11:00 AM TO 11:00 PM
+        </p>
+        <p>
+          2445 Times Blvd
+          <br />
+          Houston, TX 77005
+          <br />
           <a href="https://goo.gl/maps/eWgmNWSyR2nqoWaw6" target="_blank" rel="noopener noreferrer">
-            2445 Times Blvd
-            <br />
-            Houston, TX 77005
+            Directions
           </a>
         </p>
       </Flex>
