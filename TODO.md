@@ -1,2 +1,3 @@
 - Use Netfify on this project and tie deployments to the domain name
 - Create a staging environment for changes
+- Convert to Gatsby
