@@ -3,6 +3,22 @@ import styled from 'styled-components'
 import Layout from '../../components/Layout/Layout'
 import Flex from '../../components/Flex'
 
+const Container = styled(Layout)`
+  @media screen and (max-width: 1024px) {
+    & .flex {
+      flex-direction: column;
+
+      & > div {
+        justify-content: center;
+      }
+
+      & > div:first-child {
+        flex-basis: unset;
+        margin: 0 auto;
+      }
+    }
+  }
+`
 const FlexLocation = styled(Flex)`
   & > div:first-child {
     flex-basis: 350px;
@@ -16,9 +32,9 @@ const FlexLocation = styled(Flex)`
 `
 
 const LocationPage = () => (
-  <Layout title="Location">
+  <Container title="Location">
     <FlexLocation justifyCenter>
-      <Flex column justifyCenter>
+      <div>
         <a href="https://houston.politanrow.com/vendors" target="_blank" rel="noopener noreferrer">
           <img
             src="http://api.breakingbao.com/wp-content/uploads/2019/10/politan.jpg"
@@ -26,8 +42,8 @@ const LocationPage = () => (
             width="250"
           />
         </a>
-      </Flex>
-      <Flex column justifyCenter>
+      </div>
+      <div>
         <h1>POLITAN ROW HOUSTON</h1>
         <p>
           SUN-THURS 11:00 AM TO 10:00 PM
@@ -43,7 +59,7 @@ const LocationPage = () => (
             Directions
           </a>
         </p>
-      </Flex>
+      </div>
       {/*
       <div className="mdl-cell mdl-cell--8-col">
 
@@ -67,7 +83,7 @@ const LocationPage = () => (
       </div>
       */}
     </FlexLocation>
-  </Layout>
+  </Container>
 )
 
 export default LocationPage

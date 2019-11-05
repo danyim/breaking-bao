@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Flex = styled.div`
+const Flex = styled.div.attrs(() => ({ className: 'flex' }))`
   display: flex;
   width: 100%;
   ${({ column }) => (column ? 'flex-direction: column;' : '')}

@@ -1,4 +1,3 @@
-parser: flow
 semi: false
 singleQuote: true
 bracketSpacing: true

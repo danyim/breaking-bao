@@ -10,8 +10,17 @@ const Container = styled(Layout)`
   }
 
   @media screen and (max-width: 1024px) {
-    & .video {
-      width: 100%;
+    & .flex {
+      flex-direction: column;
+
+      & > div {
+        justify-content: center;
+      }
+
+      & > div:first-child {
+        flex-basis: unset;
+        margin: 0 auto;
+      }
     }
   }
 `
