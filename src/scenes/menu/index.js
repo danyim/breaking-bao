@@ -1,90 +1,45 @@
 import React from 'react'
 import styled from 'styled-components'
-import based from '../../assets/images/based.jpg'
-import fry from '../../assets/images/fry.jpg'
-import kfc from '../../assets/images/kfc.jpg'
-import laab from '../../assets/images/laab.jpg'
-import logo from '../../assets/images/logo.png'
-import sloppy from '../../assets/images/sloppy.jpg'
-import tamchick from '../../assets/images/tamchick.jpg'
 
 import Layout from '../../components/Layout/Layout'
 
 const Container = styled(Layout)`
-  .menu-item {
+  h2 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: -0.015rem;
+    font-size: 1.2rem;
+    margin: 2.4rem 0 0.8rem;
+    text-align: center;
+  }
+`
+
+const MenuItems = styled.ul`
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 0.4rem 0;
     display: flex;
-    flex-flow: row nowrap;
-    margin: 1rem 0;
-    justify-content: flex-start;
-
-    .menu-item-image {
-      order: 1;
-      width: 450px;
-    }
-    .menu-item-info {
-      order: 2;
-      margin: 0 3rem;
-    }
-
-    .menu-item-info h1 {
-      margin: 0.5rem 0 0.75rem;
-    }
-    .menu-item-info .ingredients {
-      margin-top: 0;
-      padding-left: 1.5rem;
-      & li {
-        font-family: 'Dosis', serif;
-        font-size: 16px;
-      }
-    }
+    width: 100%;
+    margin: 0.8rem 0;
   }
 
-  .menu-item:nth-child(2n + 1) {
-    justify-content: flex-end;
-
-    .menu-item-image {
-      order: 2;
-    }
-    .menu-item-info {
-      order: 1;
-    }
+  & [name='item-name'] {
+    font-size: 1rem;
+    flex: 0 0 180px;
+    text-align: right;
+    display: inline-block;
+    line-height: 1.5rem;
   }
 
-  & .abril {
-    font-family: 'Abril Fatface', serif;
-  }
-
-  & .lobster {
-    font-family: 'Lobster', serif;
-  }
-
-  & .satisfy {
-    font-family: 'Satisfy', serif;
-  }
-
-  & .shadows {
-    font-family: 'Shadows Into Light', serif;
-  }
-
-  @media screen and (max-width: 1024px) {
-    & .menu-item {
-      flex-flow: column nowrap;
-      .menu-item-image {
-        width: calc(100% - 2rem);
-        margin: 0 1rem;
-      }
-    }
-
-    & .menu-item:nth-child(2n + 1) {
-      justify-content: flex-end;
-
-      .menu-item-image {
-        order: 1;
-      }
-      .menu-item-info {
-        order: 2;
-      }
-    }
+  & [name='item-description'] {
+    margin-left: 0.8rem;
+    font-style: italic;
+    display: inline-block;
+    flex: 1 1 auto;
+    line-height: 1.5rem;
   }
 `
 
@@ -97,100 +52,83 @@ const ItemImage = styled.div`
   min-height: 350px;
 `
 
-const IMAGES = {
-  based,
-  fry,
-  kfc,
-  laab,
-  logo,
-  sloppy,
-  tamchick
-}
-
-const MENU_ITEMS = [
-  {
-    id: 'based',
-    title: 'BA$ED',
-    imgUrl: IMAGES.based,
-    fontClassName: 'abril',
-    ingredients: [
-      'Braised Pork Belly',
-      'Pickled Mustard Greens',
-      'Crushed Peanuts',
-      'Brown Sugar',
-      'Cilantro'
-    ]
-  },
-  {
-    id: 'kolonel',
-    title: 'The Kolonel',
-    imgUrl: IMAGES.kfc,
-    fontClassName: 'abril',
-    ingredients: [
-      'Fried Chicken',
-      'Spicy Kolonel Sauce',
-      'Pickled Carrots &amp; Daikon',
-      'Green Onion',
-      'Sesame Seeds'
-    ]
-  },
-  {
-    id: 'thaidai',
-    title: 'Thai-Dai',
-    imgUrl: IMAGES.tamchick,
-    fontClassName: 'shadows',
-    ingredients: [
-      'Shredded Chicken',
-      'Thai Tamarind Sauce',
-      'Pickled Daikon',
-      'Green Onion',
-      'Sesame Seeds'
-    ]
-  },
-  {
-    id: 'laabcity',
-    title: 'Laab City',
-    imgUrl: IMAGES.laab,
-    fontClassName: 'lobster',
-    ingredients: ['Thai Ground Beef', 'Pickled Cucumbers', 'Cilantro', 'Sesame Seeds']
-  },
-  {
-    id: 'sloppyjack',
-    title: 'Sloppy Jack',
-    imgUrl: IMAGES.sloppy,
-    fontClassName: 'shadows',
-    ingredients: [
-      'Shredded Jack Fruit',
-      'Spicy Kolonel Sauce',
-      'Pickled Carrots and Daikon',
-      'Green Onions',
-      'Sesame Seeds'
-    ]
-  },
-  {
-    id: 'bbfries',
-    title: 'BB Fries',
-    imgUrl: IMAGES.fry,
-    fontClassName: 'satisfy',
-    ingredients: ['Red Pepper Flakes', 'Semi-Sweet Glaze', 'Cilantro', 'Sesame Seeds']
-  }
-]
-
 const MenuPage = () => (
   <Container title="Menu">
-    {MENU_ITEMS.map(menuItem => (
-      <div className="menu-item" key={menuItem.id}>
-        <ItemImage className="menu-item-image" url={menuItem.imgUrl} />
-        <div className="menu-item-info">
-          <h1 className={menuItem.fontClassName}>{menuItem.title}</h1>
-          <ul className="ingredients">
-            {menuItem.ingredients.map(i => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    ))}
+    <h2>Shareables</h2>
+    <MenuItems>
+      <li>
+        <span name="item-name">K-SO</span>
+        <span name="item-description">Korean Chile con queso served with wonton chips</span>
+      </li>
+    </MenuItems>
+
+    <h2>Baos</h2>
+    <MenuItems>
+      <li>
+        <span name="item-name">Gyu Bao</span>
+        <span name="item-description">
+          Dashi simmered ribeye, spiced radish, green onion, fried garlic, and sesame seeds
+        </span>
+      </li>
+      <li>
+        <span name="item-name">Bao Boi</span>
+        <span name="item-description">BBQ pork, pickled red onion, fried garlic, and cilantro</span>
+      </li>
+      <li>
+        <span name="item-name">Sloppy Jack</span>
+        <span name="item-description">
+          Shredded jackfruit, spiced radish, green onion, cilantro, and sesame seeds
+        </span>
+      </li>
+    </MenuItems>
+
+    <h2>Rice Bowls</h2>
+    <MenuItems>
+      <li>
+        <span name="item-name">Gyu Bao Bowl</span>
+        <span name="item-description">
+          Dashi simmered ribeye, spiced radish, Korean cucumbers, furikake, fried shallots, and
+          cilantro over a bed of white rice
+        </span>
+      </li>
+      <li>
+        <span name="item-name">Bao Boi Bowl</span>
+        <span name="item-description">
+          BBQ pork, pickled red onion, Korean cucumbers, furikake, fried garlic, and cilantro over a
+          bed of white rice
+        </span>
+      </li>
+    </MenuItems>
+
+    <h2>Sides</h2>
+    <MenuItems>
+      <li>
+        <span name="item-name">Assorted Pickles</span>
+        <span name="item-description">Rotating assortment of pickles</span>
+      </li>
+      <li>
+        <span name="item-name">Asian Slaw</span>
+        <span name="item-description">
+          Green and red cabbage, carrots, green onion, and edamame
+        </span>
+      </li>
+      <li>
+        <span name="item-name">Seasoned Wonton Chips</span>
+        <span name="item-description">Wonton chips seasoned with house blend seasoning</span>
+      </li>
+    </MenuItems>
+
+    <h2>Drinks</h2>
+    <MenuItems>
+      <li>
+        <span name="item-name">Yuzu Slush</span>
+        <span name="item-description">Refreshing Yuzu flavored slushie</span>
+      </li>
+      <li>
+        <span name="item-name">KOR-Chata</span>
+        <span name="item-description">Korean-Mexican Horchata blend</span>
+      </li>
+    </MenuItems>
   </Container>
 )
 

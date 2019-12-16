@@ -47,7 +47,7 @@ const Container = styled.div`
 const Main = styled.main`
   @media screen and (max-width: 1024px) {
     padding: 0;
-    margin: 0 0.5rem;
+    margin: 0 0.85rem;
   }
 `
 

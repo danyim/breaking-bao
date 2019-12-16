@@ -32,8 +32,6 @@ const PageTitle = styled.h3`
   }
 
   @media screen and (max-width: 1024px) {
-    padding: 0 0.5rem;
-
     &::after {
       width: 80%;
       animation: 1.25s ${growKeyframe(null, '80%')} ease-in-out;
