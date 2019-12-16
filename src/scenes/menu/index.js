@@ -43,15 +43,6 @@ const MenuItems = styled.ul`
   }
 `
 
-const ItemImage = styled.div`
-  background-image: url(${props => props.url});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px center;
-  border: 1px solid black;
-  min-height: 350px;
-`
-
 const MenuPage = () => (
   <Container title="Menu">
     <h2>Shareables</h2>
